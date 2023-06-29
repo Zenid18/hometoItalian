@@ -1,0 +1,14 @@
+.social-section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon-set{
+    padding: 10px 65px !important;
+}
+.pop-section {
+    padding: 10px 28px;
+}

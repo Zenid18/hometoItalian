@@ -1,0 +1,78 @@
+form.searchfrom {
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #F6F6F6;
+   
+    border-radius: 100px;
+    min-width: 26%;
+    border: unset;
+    padding: 6px 13px;
+}
+input.seach-input.form-control {
+    border: unset;
+    background: transparent;
+}
+.search-icon {
+    background-image: radial-gradient(circle, #f55454, #f04a46, #eb4037, #e53627, #de2c14);
+    border-radius: 100px;
+    padding: 10px 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  .seach-input::placeholder {
+    color: #000000 ;
+    font-size:22px;
+    font-weight: 500;
+
+
+  }
+a.nav-item.nav-link {
+    color: var(--text-green) !important;
+    font-size: 22px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+button.custome-btn {  
+    border-radius: 100px;
+    border: unset;
+    padding: 14px 40px;
+    white-space: nowrap;
+    
+}
+button.login {
+    background: #fff !important;
+    color: #000 !important;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-left: 11px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+button.login:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+button.sign{
+    transition: transform 0.3s;
+    background-image: radial-gradient(circle, #f55454, #f04a46, #eb4037, #e53627, #de2c14) !important;
+    color: #ffffff !important;
+    margin-left: 28px;
+}
+button.sign:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.seach-input:focus {
+    color: unset;
+    background-color:unset;
+    border-color: unset;
+    outline: 0;
+    box-shadow: unset;
+}
+.search-from {
+  visibility: hidden;
+}
+.from-set{
+    display: block;
+}
