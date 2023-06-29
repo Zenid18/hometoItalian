@@ -36,7 +36,7 @@ const Testimontial = () => {
 
         <section className='text-margin'>
      <div className='row align-items-center justify-content-center row-revers'>
-                <div className='col-lg-6 col-md-6 col-12'>
+                <div className='col-lg-6 col-md-8 col-12'>
                     <div className='main-exactly-section'>
                     <div className='exactly-section'> 
                        <div>
@@ -62,8 +62,8 @@ const Testimontial = () => {
                     </div>
                     </div>
                 </div> 
-                <div className='col-lg-6 col-md-6 col-12'>
-                    <div className=''> 
+                <div className='col-lg-6 col-md-8 col-12'>
+                    <div className='monial-img'> 
                           <img src={Test} className='img-fluid' alt='text' />
                     </div>
                 </div> 
@@ -72,13 +72,13 @@ const Testimontial = () => {
      </section>
      <section className='text-margin'>
           <div className='row align-items-center justify-content-center'>
-               <div className='col-lg-6 col-md-6 col-12'>
-                    <div className=''> 
+               <div className='col-lg-6 col-md-8 col-12'>
+                    <div className='monial-img'> 
                           <img src={Testb} className='img-fluid' alt='text' />
                     </div>
                 </div> 
 
-                <div className='col-lg-6 col-md-6 col-12'>
+                <div className='col-lg-6 col-md-8 col-12'>
                     <div className='main-exactly-section'>
                     <div className='exactly-sections'> 
                        <div>
@@ -109,7 +109,7 @@ const Testimontial = () => {
      
      <section className='text-margin'>
      <div className='row align-items-center justify-content-center row-revers'>
-                <div className='col-lg-6 col-md-6 col-12'>
+                <div className='col-lg-6 col-md-8 col-12'>
                     <div className='main-exactly-section'>
                     <div className='exactly-section'> 
                        <div>
@@ -135,8 +135,8 @@ const Testimontial = () => {
                     </div>
                     </div>
                 </div> 
-                <div className='col-lg-6 col-md-6 col-12'>
-                    <div className=''> 
+                <div className='col-lg-6 col-md-8 col-12'>
+                    <div className='monial-img'> 
                           <img src={Testc} className='img-fluid' alt='text' />
                     </div>
                 </div> 
@@ -145,8 +145,8 @@ const Testimontial = () => {
      </section>
      <section className='text-margin'>
          <div className='row align-items-center justify-content-center'>
-                 <div className='col-lg-6 col-md-6 col-12'>
-                    <div className=''> 
+                 <div className='col-lg-6 col-md-8 col-12'>
+                    <div className='monial-img'> 
                           <img src={Testd} className='img-fluid' alt='text' />
                     </div>
                 </div> 
@@ -181,7 +181,7 @@ const Testimontial = () => {
 
      <section className='text-margin'>
      <div className='row align-items-center justify-content-center row-revers'>
-                <div className='col-lg-6 col-md-6 col-12'>
+                <div className='col-lg-6 col-md-8 col-12'>
                     <div className='main-exactly-section'>
                     <div className='exactly-section'> 
                        <div>
@@ -207,8 +207,8 @@ const Testimontial = () => {
                     </div>
                     </div>
                 </div> 
-                <div className='col-lg-6 col-md-6 col-12'>
-                    <div className=''> 
+                <div className='col-lg-6 col-md-8 col-12'>
+                    <div className='monial-img'> 
                           <img src={Teste} className='img-fluid' alt='text' />
                     </div>
                 </div> 
@@ -218,8 +218,8 @@ const Testimontial = () => {
 
      <section className='text-margin'>
          <div className='row align-items-center justify-content-center'>
-                 <div className='col-lg-6 col-md-6 col-12'>
-                    <div className=''> 
+                 <div className='col-lg-6 col-md-8 col-12'>
+                    <div className='monial-img'> 
                           <img src={Testf} className='img-fluid' alt='text' />
                     </div>
                 </div> 
