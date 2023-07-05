@@ -1,0 +1,71 @@
+.plans h3{
+    color: #020000;
+font-size: 22px;
+font-weight: 500;
+}
+.plans {
+    border-bottom: 1px solid #CACACA;
+    padding: 10px 0px;
+}
+.save-detail p i {
+    color: #9B10FF;
+    margin-right: 10px;
+}
+.simple-text {
+    color: #555;
+    text-align: center;
+    font-size: 18px;
+}
+.save-detail p {
+    color: #777;
+    font-size: 15px;
+}
+.simple-text p{
+    color: #555;
+text-align: center;
+font-size: 18px;
+}
+.main-plan-section {
+    border-radius: 10px 10px 0px 0px;
+    background: #ffffff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    min-height: 470px;
+}
+.plan-header {
+    border-radius: 10px 10px 0px 0px;
+    background: #F4F4F4;
+    text-align: center;
+    padding: 30px 20px;
+}
+.plan-list-section ul {
+    list-style: none;
+    text-align: center;
+    padding: 10px 20px;
+}
+.plan-btn{
+    text-align: center;
+}
+.drop-section {
+    padding-bottom: 10px;
+}
+.plan-headers {
+    border-radius: 10px 10px 0px 0px;
+    background: #FBA333;
+    text-align: center;
+    padding: 15px 30px;
+}
+button#dropdown-basic {
+    border: 1px solid #fff;
+    background: #ededed00;
+    padding: 1px 11px;
+}
+.plan-list-section ul li>p {
+    color: rgba(86, 86, 86, 0.80);
+    font-size: 19px;
+}
+.plan-list-section {
+    padding-top: 12px;
+}
+.simple-text {
+    padding: 17px 2px;
+}

@@ -1,7 +1,6 @@
 // import Popimg from '../../assets/images/pop-img.png';
 import React from "react";
 import Form from 'react-bootstrap/Form'; 
-
 import './style.css';
 import '../../App.css';
 import Loginimg from "../../assets/image/loginlogo.png";

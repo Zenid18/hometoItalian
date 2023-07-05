@@ -8,7 +8,7 @@ form.searchfrom {
     border-radius: 100px;
     min-width: 26%;
     border: unset;
-    padding: 6px 13px;
+    padding: 4px 13px;
 }
 input.seach-input.form-control {
     border: unset;
@@ -17,7 +17,7 @@ input.seach-input.form-control {
 .search-icon {
     background-image: radial-gradient(circle, #f55454, #f04a46, #eb4037, #e53627, #de2c14);
     border-radius: 100px;
-    padding: 10px 9px;
+    padding: 7px 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,16 +31,16 @@ input.seach-input.form-control {
   }
 a.nav-item.nav-link {
     color: var(--text-green) !important;
-    font-size: 22px;
+    font-size: 19px;
     font-weight: 500;
     white-space: nowrap;
 }
-button.custome-btn {  
+button.custome-btn {
     border-radius: 100px;
     border: unset;
-    padding: 14px 40px;
+    padding: 0px 32px;
     white-space: nowrap;
-    
+    font-size: 16px;
 }
 button.login {
     background: #fff !important;

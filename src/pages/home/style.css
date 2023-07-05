@@ -46,6 +46,7 @@
     color:#464646;
     font-size: 21px;
     padding: 21px 0px 18px 0px;
+    font-family: 'Nunito Sans', sans-serif;
 }
 .custome-iqvs {
     background-image: var(--grid-color);
@@ -90,11 +91,11 @@
     right: -28px;
 }
 .margin-bttom {
-    margin-bottom: 32px;
+    margin-bottom: 10px;
 }
 .home-details{
     color: #000;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 700;
     font-weight: 700;
     text-align: center;
@@ -113,17 +114,20 @@
 }
 p.skill-details {
     text-align: center;
-    font-size: 24px;
+    font-size: 21px;
     color: #696984;
 }
 .verified-section {
     position: relative;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 10px;
-    min-height: 325px;
+    min-height: 290px;
     text-align: center;
-    padding: 26px 20px;
+    padding: 6px 20px;
     margin-right: 22px;
+}
+.verified-img img {
+    max-width: 63%;
 }
 .verified-img {
     position: absolute;
@@ -135,7 +139,7 @@ p.skill-details {
     margin: 0 auto;
     left: 0;
     right: 0;
-    top: -39px;
+    top: -27px;
     z-index: 9;
 }
 .verified-img:before {
@@ -143,15 +147,15 @@ p.skill-details {
     position: absolute;
     content: '';
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    width: 121px;
-    height: 121px;
+    width: 100px;
+    height: 100px;
     border-radius: 100px;
     z-index: -2;
 }
 
 p.community-details {
     padding: 12px 28px 0px 19px;
-    font-size: 20px;
+    font-size: 18px;
     color: #696984;
 }
 .verified-margin {
@@ -161,11 +165,11 @@ p.community-details {
     margin-top: 67px !important;
 }
 section.find-margin {
-    margin-top: 106px;
+    margin-top: 70px;
 }
 .iqv-details{
   color: var(--dark-text);  
-  font-size: 40px ;
+  font-size: 30px ;
   font-weight: 600;
    
 }
@@ -197,7 +201,7 @@ section.find-margin {
 }
 .program-detail p{
     color: #696984;
-    font-size: 22px;
+    font-size: 19px;
     letter-spacing: 1px;
     margin: 0;
    
@@ -208,22 +212,23 @@ section.find-margin {
  margin: 0;
 }
 .iqa-section {
-    padding: 81px 0px 58px 1px;
+    padding: 40px 0px 58px 1px;
 }
 .explore-btn {
     margin: 38px 67px;
 }
 .courses-detail{
     color: #696984;
-    font-size: 23px;
+    font-size: 20px;
 }
 .Couresimg-section {
     position: relative;
 }
 .circle-a {
     position: absolute;
+
     right: -34px;
-    bottom: 0px;
+    bottom: 32px;
     animation: mover 1s infinite  alternate;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -237,14 +242,18 @@ section.find-margin {
     100% { transform: translateY(-10px); }
 }
 
-.group-a{
+/* .group-a{
     position: absolute;
     top: 0;
     right: 54px;
     display: flex;
     align-items: center;
+} */
+.sec-couers {
+    position: absolute;
+    bottom: 95px;
+    right: 43px;
 }
-
 .book-img {
     position: absolute;
     right: -10px;
@@ -335,13 +344,13 @@ section.find-margin {
   
 }
 .test-detail {
-    font-size: 20px;
+    font-size: 17px;
     letter-spacing: 2px;
     font-weight: 500;
     color: #525596;
 }
 .say-detail {
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 600;
     margin-bottom: 29px;
 }
@@ -359,9 +368,9 @@ section.find-margin {
 }
 p.help-detail {
     color: #5F5F7E;
-    font-size: 22px;
+    font-size: 18px;
     border-left: 1px solid #BDBDD1;
-    padding: 0px 0px 0px 27px;
+    padding: 0px 0px 0px 23px;
     margin-left: 18px;
 }
 .rose-section ul {
@@ -372,25 +381,28 @@ p.help-detail {
     align-items: center;
     justify-content: space-around;
 }
-.rose-section ul li>p{
- color: #5F5F7E;
- font-size: 22px;
- font-weight: 600;
+.rose-section ul li>p {
+    color: #5F5F7E;
+    font-size: 20px;
+    font-weight: 600;
 }
 button.custome-view {
     border-radius: 100px;
     background: transparent;
     border: 1px solid #D30000;
-    padding: 0px 0px 0px 30px;
-    color:#D30000;
+    padding: 0px 0px 0px 17px;
+    color: #D30000;
     font-size: 22px;
 }
 .fa-arrow-right {
     border: 1px solid #D30000;
     border-radius: 100px;
-    padding: 25px;
-    margin-left: 62px;
+    padding: 20px;
+    margin-left:50px;
 }
 .view-btn {
     margin-top: 33px;
+}
+.set-coures img {
+    max-width: 65%;
 }

@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../App.css';
 import'./style.css';
 import Button from 'react-bootstrap/Button';   //buttom import
 import Form from 'react-bootstrap/Form';  //Formimpot
 import Footerlogo from '../../assets/image/footer-logo.png'
+import Popupes from '../pricingplans';
 const Footer =( )=>{
+    const [show,setShow] = useState(false)
 return(
 <section className='footer-bg'>
     <footer>
@@ -33,7 +35,7 @@ return(
                         required
                         />
                 
-                <button type="submit" className='custome-subcribe'>Subscribe</button>
+                <button type="submit" className='custome-subcribe' onClick={()=> setShow(true)}>Subscribe</button>
                  </form>
                     </div>
 
@@ -111,7 +113,7 @@ return(
                 
               </div>
         </div>
-        
+        {show ? <Popupes show ={show} setShow ={setShow}/> :""}
       </div>
  </section>
 </section>

@@ -6,7 +6,7 @@ import Footer from '../../components/footer';
 import Button from 'react-bootstrap/Button';  
 import Caseimg from '../../assets/image/caesimg.png';
 import Hedarimg from '../../assets/image/header-pic.png';
-import Check from '../../assets/image/check.png';
+import Couresas from '../../assets/image/cur.png'
 import Verfied from '../../assets/image/Verifiedteachers.png';
 import lessons from '../../assets/image/Affordablelessons.png';
 import  flexibility from '../../assets/image/clock.png';
@@ -47,7 +47,7 @@ const Home = () => {
                 </div>
                 
                 <div>
-                                <Button variant="secondary" size="lg" className='custome-iqvs' active>
+                                <Button variant="secondary" onClick={ () =>navigate ("/tutors")} size="lg" className='custome-iqvs' active>
                                 Explore Teachers
                     </Button>
                 </div>
@@ -58,11 +58,7 @@ const Home = () => {
                     <div>
                             <img src={Caseimg} className='img-fluid' alt='Case'>
                             </img>
-                            <div className='check-section'>
-                              <img src={Check} className='img-fluid' alt='check'></img>
-
-
-                            </div>
+                           
                     </div>
                     <div className='head-section'>
                         <img src={Hedarimg } className='img-fluid' alt='hedar'></img>
@@ -245,14 +241,10 @@ const Home = () => {
                             <div className='Couresimg-section'>
                              <div>
                              <img  src={Couresimg} className='img-fluid' alt='iQv'  />
-                             <div className='group-a'>
-                                <div className='croesgrup'>
-                                <img src={Coressb} className='img-fluid' alt='group'/> 
-                                </div>
-                               <div className='checkgrup'>
-                               <img src={Coressc} className='img-fluid' alt='group'/> 
-                               </div>
+                        
                              </div>
+                             <div className='sec-couers'>
+                             <img src={Couresas}  className='img-fluid' alt='cricle' /> 
                              </div>
                                 <div className='circle-a'>
                                     <img src={Couresa}  className='img-fluid' alt='cricle' />  
@@ -412,14 +404,14 @@ const Home = () => {
                                                 </div>
                                             <div className='view-btn'>
                                             <button type='submit' onClick={() => navigate("/testimonials")} className='custome-view'>
-                                            VIew All  <i class="fa-solid fa-arrow-right"></i>
+                                            View All  <i class="fa-solid fa-arrow-right"></i>
                                               </button>
                                             </div>
 
 
                                             </div>
                                             <div className='col-lg-6 col-mg-6 col-12'>
-                                                    <div className='Couresimg-section'>
+                                                    <div className='Couresimg-section set-coures'>
                                                     <div>
                                                     <img  src={Say} className='img-fluid' alt='iQv'  />
                                                   

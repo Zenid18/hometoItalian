@@ -36,7 +36,7 @@ const Testimontial = () => {
 
         <section className='text-margin'>
      <div className='row align-items-center justify-content-center row-revers'>
-                <div className='col-lg-6 col-md-8 col-12'>
+                <div className='col-lg-6 col-md-6 col-12'>
                     <div className='main-exactly-section'>
                     <div className='exactly-section'> 
                        <div>
@@ -78,7 +78,7 @@ const Testimontial = () => {
                     </div>
                 </div> 
 
-                <div className='col-lg-6 col-md-8 col-12'>
+                <div className='col-lg-6 col-md-6 col-12'>
                     <div className='main-exactly-section'>
                     <div className='exactly-sections'> 
                        <div>
@@ -109,7 +109,7 @@ const Testimontial = () => {
      
      <section className='text-margin'>
      <div className='row align-items-center justify-content-center row-revers'>
-                <div className='col-lg-6 col-md-8 col-12'>
+                <div className='col-lg-6 col-md-6 col-12'>
                     <div className='main-exactly-section'>
                     <div className='exactly-section'> 
                        <div>
@@ -181,7 +181,7 @@ const Testimontial = () => {
 
      <section className='text-margin'>
      <div className='row align-items-center justify-content-center row-revers'>
-                <div className='col-lg-6 col-md-8 col-12'>
+                <div className='col-lg-6 col-md-6 col-12'>
                     <div className='main-exactly-section'>
                     <div className='exactly-section'> 
                        <div>
