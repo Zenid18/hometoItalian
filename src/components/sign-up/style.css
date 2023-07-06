@@ -12,3 +12,10 @@
 .pop-section {
     padding: 10px 28px;
 }
+.login-from:focus-visible {
+    outline-color: #e74430;
+}
+.login-from input {
+    border: unset !important;
+    background: #f6f6f6 !important;
+} 

@@ -59,6 +59,13 @@ body{
 }
 
 @media only screen and (min-width:320px) and (max-width:567px) {
+  .Benvenuti-section {
+    padding-top: 14px !important;
+}
+button.custome-iqvs.exp-btn {
+  position: unset !important;
+
+}
   .from-set{
     display: none !important;
   }
@@ -82,7 +89,7 @@ button.login {
   margin-left: 0px !important;
  }
  .case-detail {
-  font-size: 35px !important;
+  font-size: 28px !important;
 }
 .reconnect-details {
   font-size: 16px !important;
@@ -90,6 +97,8 @@ button.login {
 }
 .custome-iqvs {
   margin-top: 0px !important;
+  padding: 9px 17px !important;
+  font-size: 15px !important;
 }
 .head-section {
   bottom: -7px !important;
@@ -214,12 +223,12 @@ section.find-margin {
   max-width: 60% !important;
 }
 .help-section {
-  position: unset !important ;
+  position: unset !important;
   bottom: -71px;
   right: -20px;
   left: 67px;
-  margin-top: 18px;
-  min-width:unset !important;
+  margin-top: 4px;
+  width: unset !important;
 }
 .iqv-details {
   font-size: 27px !important;
@@ -312,6 +321,13 @@ section.copyright-section {
 
 }
 @media only screen and (min-width:320px) and (max-width:992px) {
+  button.custome-btn {
+    padding: 8px 32px !important;
+}
+.width-set{
+  width: calc(100% - 200px) !important;
+}
+
   .exactly-section {
     min-width: unset !important;
     min-height: unset !important;

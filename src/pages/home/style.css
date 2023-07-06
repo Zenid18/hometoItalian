@@ -165,7 +165,7 @@ p.community-details {
     margin-top: 67px !important;
 }
 section.find-margin {
-    margin-top: 70px;
+    margin-top: 90px;
 }
 .iqv-details{
   color: var(--dark-text);  
@@ -180,7 +180,7 @@ section.find-margin {
     display: flex;
     align-items: center;
     /* margin-bottom: 32px; */
-    padding-top: 40px;
+    padding-top: 60px;
 }
 .program-img {
     display: flex;
@@ -196,8 +196,17 @@ section.find-margin {
     height: 75px;
     border-radius: 100px;
 }
-.program-detail {
-    padding-left: 45px;
+.program-detail.detail-a {
+    padding-left: 34px;
+}
+.program-detail.detail-b {
+    padding-left: 54px;
+}
+.program-detail.detail-c {
+    margin-left: 25px;
+}
+.section-set{
+    margin-left: -15px;
 }
 .program-detail p{
     color: #696984;
@@ -212,7 +221,7 @@ section.find-margin {
  margin: 0;
 }
 .iqa-section {
-    padding: 40px 0px 58px 1px;
+    padding: 60px 0px 58px 1px;
 }
 .explore-btn {
     margin: 38px 67px;
@@ -249,11 +258,18 @@ section.find-margin {
     display: flex;
     align-items: center;
 } */
-.sec-couers {
+/* .sec-couers {
     position: absolute;
     bottom: 95px;
     right: 43px;
+    animation: shake 2s ease infinite;
 }
+@keyframes shake {
+	0%, 50% {transform: translateX(0);}
+	10%, 50%, 70%,90% {transform: translateX(-5px);}
+	20%, 60%,  100% {transform: translateX(10px);}
+} */
+
 .book-img {
     position: absolute;
     right: -10px;
@@ -364,7 +380,7 @@ section.find-margin {
     bottom: -71px;
     /* right: -20px; */
     left: 67px;
-    min-width: 557px;
+    width: 477px;
 }
 p.help-detail {
     color: #5F5F7E;
@@ -405,4 +421,24 @@ button.custome-view {
 }
 .set-coures img {
     max-width: 65%;
+}
+.set-b img {
+    max-width: 49%;
+}
+.set-a img {
+    max-width: 58%;
+}
+.Benvenuti-section{
+    padding-top:81px;
+}
+.explore-btns{
+    position: relative;
+}
+button.custome-iqvs.exp-btn {
+    position: absolute;
+    bottom: -63px;
+    left: 0;
+}
+.roots-section {
+    width: 91%;
 }

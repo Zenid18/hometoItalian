@@ -1,5 +1,5 @@
 section.text-margin {
-    padding-top: 59px;
+    padding-top: 109px;
 }
 .main-exactly-section {
     position: relative;
@@ -10,11 +10,11 @@ section.text-margin {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 10px;
     background: #ffff;
-    min-width: 679px;
-    min-height: 278px;
+    min-width: 538px;
+    min-height: 244px;
     content: '';
     cursor: pointer;
-    margin-left: 27px;
+    margin-left: -58px;
 }
 .exactly-section:hover {
     background: #e3e3e382;
@@ -26,13 +26,13 @@ section.text-margin {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 10px;
     background: #ffff;
-    min-width: 661px;
-    min-height: 284px;
+    min-width: 546px;
+    min-height: 254px;
     content: '';
     cursor: pointer;
     position: absolute;
     top: -121px;
-    right: 118px;
+    right: 132px;
 }
 .exactly-sections:hover {
     background: #e3e3e382;
@@ -41,7 +41,10 @@ section.text-margin {
 .main-test {
     display: flex;
     justify-content: center;
+    padding: 50px 0px 0px 0px;
+    font-family: 'Nunito Sans', sans-serif;
 }
+
 .test-detail {
     font-size: 20px;
     letter-spacing: 2px;
@@ -51,10 +54,11 @@ section.text-margin {
 }
 .exactly-detail {
     color: #5F5F7E;
-    font-size: 22px;
+    font-size: 19px;
     padding: 0px 20px;
     border-left: 1px solid #BDBDD1;
     margin: 10px 13px;
+    font-family: 'Nunito Sans', sans-serif;
 }
 .exactly-list ul {
     display: flex;
@@ -63,6 +67,7 @@ section.text-margin {
     list-style: none;
     margin: 0;
     padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
 }
 .name-detail {
     color: #5F5F7E;
@@ -124,9 +129,9 @@ section.text-margin {
     border-radius: 26px;
 }
 .tried-detail {
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 600;
-   
+    text-align: center;
 }
 .form-selects {
     padding: 10px 0px;
@@ -134,7 +139,7 @@ section.text-margin {
 .custome-subcribes {
     background-image: var(--grid-color);
     border-radius: 100px;
-    padding: 15px 57px;
+    padding: 11px 57px;
     border: unset;
     color: #fff;
     font-size: 22px;

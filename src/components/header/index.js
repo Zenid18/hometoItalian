@@ -12,7 +12,9 @@ import Logo from '../../assets/image/logo.png';
 import Iconsearch from '../../assets/image/fa_search.png'
 import Popup from '../../components/login';
 import Popups from '../../components/sign-up';
+import { useNavigate } from 'react-router-dom';
 const Header = () =>{
+  const navigate = useNavigate()
    const [show,setShow] = useState(false)
    const [show1,setShow1] = useState(false)
     return(
@@ -21,7 +23,7 @@ const Header = () =>{
       <Container>
         
         <Navbar.Brand href="#home">
-            <img src={Logo} className='img-fluid' alt='Logo'/> 
+            <img onClick={()=>{navigate("/")}} src={Logo} className='img-fluid' alt='Logo'/> 
         </Navbar.Brand>
         <Form className="searchfrom from-set">
             <Form.Control

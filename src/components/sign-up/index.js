@@ -35,6 +35,12 @@ const Popups = (props) => {
                            </div>
                            </div>
                            <div className="login-from set-top">
+                              <input type="text" className="form-control" placeholder="Last Name" required /> 
+                           <div className="icon">
+                           <i class="fa-solid fa-user"></i>
+                           </div>
+                           </div>
+                           <div className="login-from set-top">
                               <input type="email" className="form-control" placeholder="Email Address" required /> 
                            <div className="icon">
                            <i class="fa-solid fa-envelope"></i>

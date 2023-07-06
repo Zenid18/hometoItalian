@@ -1,0 +1,17 @@
+.card {
+    /* Add common card styles here */
+  }
+  
+  .card.slide-in {
+    opacity: 0;
+    transform: translateX(-100px); /* Adjust as needed */
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  .card.slide-in.right {
+    transform: translateX(100px); /* Adjust as needed */
+  }
+  
+  .card.slide-in.up {
+    transform: translateY(100px); /* Adjust as needed */
+  }

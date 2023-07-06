@@ -3,6 +3,7 @@ import './style.css';
 import '../../App.css';
 import Header from '../../components/header';
 import Footer from '../../components/footer';
+import Card from '../../components/card';
 import Button from 'react-bootstrap/Button';  
 import Caseimg from '../../assets/image/caesimg.png';
 import Hedarimg from '../../assets/image/header-pic.png';
@@ -25,9 +26,11 @@ import Resources from '../../assets/image/Resources.png';
 import Resico  from '../../assets/image/resourceimg.png';
 import Say from '../../assets/image/say.png';
 import Line from '../../assets/image/Line.png'; 
+
 import { useNavigate } from 'react-router-dom';
 const Home = () => {
     const navigate = useNavigate()
+  
     return(
 <section> 
       <Header/>
@@ -36,18 +39,18 @@ const Home = () => {
   <div className='container'>
     <div className='row align-items-center justify-contnet-center'>
         <div className='col-lg-6 col-md-6 col-12'>
-            <div>
+            <div className='Benvenuti-section'>
                 <h1 className='case-detail target'>
                    Benvenuti a casa!
                 </h1>
-                <div>
+                <div class="roots-section">
                     <p className='reconnect-details'>
                     We’ll help you reconnect with your Italian roots through an all-rounded environment made of language learning, Italian culture topics and the chance to meet a native Italian teacher for a live class, or even just for asking a couple of questions. Relax and enjoy coming back home, to Italian! Your nonna will be proud.
                     </p>
                 </div>
                 
-                <div>
-                                <Button variant="secondary" onClick={ () =>navigate ("/tutors")} size="lg" className='custome-iqvs' active>
+                <div className='explore-btns'>
+                                <Button variant="secondary" onClick={ () =>navigate ("/tutors")} size="lg" className='custome-iqvs exp-btn' active>
                                 Explore Teachers
                     </Button>
                 </div>
@@ -72,7 +75,7 @@ const Home = () => {
 <div className='row align-items-center justify-content-center'>
     <div className='col-lg-8 col-md-10 col-11'>
       <div>
-      <h2 className='home-details '>
+      <h2 className='home-details' data-aos="fade-right">
       Why learn with  <span>
       Verbling?
         </span>
@@ -81,8 +84,8 @@ const Home = () => {
     </div>
 
     <div className='col-lg-7 col-md-9 col-12'>
-        <div>
-        <p className='skill-details'>
+        <div class=" slide-in "> 
+        <p className='skill-details ' >
         Skilline is one powerful online software suite that combines all the tools needed to run a successful school or office.
 
         </p>
@@ -94,8 +97,8 @@ const Home = () => {
 <div className="verified-margin">
 <div className='row align-items-center justify-content-center'>
     <div className='col-lg-4 col-md-6 col-12'>
-         <div className='verified-section'>
-                   <div className='verified-img'>
+         <div className='verified-section card-container' >
+                   <div className='verified-img'  >
                       <img src = {Verfied} className='img-fluid' alt='verified'/>
                    </div>
                    <div className='main-detail-section'>
@@ -124,7 +127,7 @@ const Home = () => {
          </div>
     </div>
     <div className='col-lg-4 col-md-6 col-12'>
-    <div className='verified-section'>
+    <div className='verified-section' data-aos ="fade-righ ">
                    <div className='verified-img'>
                       <img src = {flexibility } className='img-fluid' alt='verified'/>
                    </div>
@@ -147,7 +150,7 @@ const Home = () => {
     <div className='row  justify-content-center'>
           <div className='col-lg-8 col-md-9 col-11'>
             <div className='text-center'>
-            <h2 className='home-details'>
+            <h2 className='home-details' data-aos ="fade-left">
         Here's what you'll find at <span>
         Home to Italian
         </span>
@@ -160,50 +163,45 @@ const Home = () => {
             <div className='row align-items-center justify-content-center'>
                     <div className='col-lg-6 col-mg-6 col-12'>
                         <div>
-                            <h4 className='iqv-details margin-bttom'>
+                            <h4 className='iqv-details margin-bttom'  data-aos="fade-right">
                             Italiano Quando Vuoi <span>(IQV) </span>
                             </h4>
                         </div>
                         <div className='Quando-details'>
-                            <ul>
-                                <li>
+                           
                                         <div className='program-section'>
-                                            <div className='program-img' >
+                                            <div className='program-img set-a' >
                                                 <img src={Iqva} className='img-fluid' alt='IQV' />  
                                             </div>
-                                            <div className='program-detail'>
+                                            <div className='program-detail detail-a'>
                                                 <p>
                                                 A subscription program where you will find short video lessons with exercises.
                                                 </p>
                                             </div>
                                         </div>
-                                </li>
-                                <li>
+                               
                                     <div className='program-section'>
                                                 <div className='program-img' >
                                                     <img src={Iqvb} className='img-fluid' alt='IQV' />  
-                                                </div>
-                                                <div className='program-detail'>
+                                                </div> 
+                                                <div className='program-detail detail-b'>
                                                     <p>
                                                     It is perfect if you have little time to learn and practise but still want to see yourself get closer and closer every day to speaking and understanding Italian and Italy.
                                                     </p>
                                                 </div>
                                         </div>
-                                </li>
-                                <li>
-                                <div className='program-section'>
-                                            <div className='program-img' >
+                               
+                                <div className='program-section section-set'>
+                                            <div className='program-img set-b' >
                                                 <img src={Iqvc} className='img-fluid' alt='IQV' />  
                                             </div>
-                                            <div className='program-detail'>
+                                            <div className='program-detail detail-c'>
                                                 <p>
                                                 The content in IQV is updated and enriched every month!
                                                 </p>
                                             </div>
                                         </div> 
-                               </li>
-                                   
-                            </ul>
+                               
                             <div className='explore-btn'>
                                         <Button variant="secondary" size="lg" className='custome-iqvs' active>
                                         Explore IQVs
@@ -243,9 +241,9 @@ const Home = () => {
                              <img  src={Couresimg} className='img-fluid' alt='iQv'  />
                         
                              </div>
-                             <div className='sec-couers'>
+                             {/* <div className='sec-couers'>
                              <img src={Couresas}  className='img-fluid' alt='cricle' /> 
-                             </div>
+                             </div> */}
                                 <div className='circle-a'>
                                     <img src={Couresa}  className='img-fluid' alt='cricle' />  
                                 </div>
@@ -253,7 +251,7 @@ const Home = () => {
                     </div>
                     <div className='col-lg-6 col-mg-6 col-12'>
                         <div>
-                            <h4 className='iqv-details animation margin-bttom'>
+                            <h4 className='iqv-details animation margin-bttom'  data-aos="fade-left">
                             Online  <span>Courses </span>
                             </h4>
                         </div>
@@ -287,10 +285,10 @@ const Home = () => {
                                     <div className='col-lg-6 col-mg-6 col-12'>
                                                 <div>
                                     
-                                                    <h4 className='iqv-details'>
+                                                    <h4 className='iqv-details'  data-aos="fade-right">
                                                         <span>Book a timeslot:</span>
                                                     </h4>
-                                                    <h4 className='iqv-details margin-bttom'>
+                                                    <h4 className='iqv-details margin-bttom '  data-aos="fade-left">
                                                     it’s comfortable, we’re home!
                                                     </h4>
                                                 </div>
@@ -351,7 +349,7 @@ const Home = () => {
                                                 <div>
                                     
                                                     
-                                                    <h4 className='iqv-details animation margin-bttom'>
+                                                    <h4 className='iqv-details animation margin-bttom'  data-aos="fade-right">
                                                     Resources
                                                     </h4>
                                                 </div>
@@ -379,7 +377,7 @@ const Home = () => {
                                                         </span>
                                                     </div>
                                                     <div>
-                                                        <p className='test-detail'>
+                                                        <p className='test-detail'  data-aos="fade-right">
                                                         TESTIMONIAL
                                                         </p>
                                                     </div>
@@ -387,7 +385,7 @@ const Home = () => {
                                                    
                                                 </div>
                                                 <div>
-                                                <h4 className='say-detail margin-bttom'>
+                                                <h4 className='say-detail margin-bttom'  data-aos="fade-left">
                                                     What They Say?
                                                     </h4>
                                                 </div>
@@ -417,7 +415,7 @@ const Home = () => {
                                                   
                                                     
                                                     </div>
-                                                       <div className='help-section'>
+                                                       <div className='help-section'  data-aos="fade-up">
                                                             <p className='help-detail'>
                                                             "Thank you so much for your help. It's exactly what I've been looking for. You won't regret it. It really saves me time and effort. Skilline is exactly what our business has been lacking."
                                                             </p>

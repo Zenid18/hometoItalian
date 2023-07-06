@@ -7,7 +7,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 const Popupes = (props) => { 
     return (
       <div className="popup-overlay">
-        <div className="popup-content">
+        <div className="popup-content width-set">
           <div className='popup-logo pb-2'>
                     <div>
                           <div  className="plans">

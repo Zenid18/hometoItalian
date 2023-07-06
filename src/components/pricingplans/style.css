@@ -69,3 +69,6 @@ button#dropdown-basic {
 .simple-text {
     padding: 17px 2px;
 }
+.width-set{
+    width: calc(100% - 500px) !important;
+}
