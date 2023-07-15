@@ -2,12 +2,12 @@
     background-color: #F0F1F4;
     margin-top: 158px;
 }
-.sub-details{
+.sub-details {
     color: var(--color-text);
     font-weight: 500;
-    font-size: 26px;
+    font-size: 19px;
     letter-spacing: 2px;
-    padding-bottom: 20px;
+    padding-bottom: 19px;
 }
 .logo-top{
     padding-top: 48px;
@@ -22,7 +22,7 @@
 }
 .last-footer-section p {
     text-align: center;
-    font-size: 22px;
+    font-size: 13px;
     color: var(--color-text);
     margin: 0;
 }
@@ -34,19 +34,19 @@ section.copyright-section {
 .footer-section ul li p {
     margin: 0;
     width: max-content;
-    color:var(--color-text);
+    color: var(--color-text);
     padding: 0px 35px 0px 0px;
-    font-size: 20px;
+    font-size: 14px;
     position: relative;
     letter-spacing: 2px;
 }
 .footer-section ul li p:before {
     position: absolute;
     width: 2px;
-    height: 22px;
+    height: 15px;
     background: #626381;
     content: '';
-    right: 17px;
+    right: 20px;
     /* bottom: 32px; */
     top: 4px;
 }
@@ -54,7 +54,7 @@ section.copyright-section {
     padding-bottom: 25px;
 }
 .news-top-padding {
-    padding-top: 56px;
+    padding-top: 42px;
 }
 form.Subscribe-section {
     display: flex;
@@ -62,12 +62,12 @@ form.Subscribe-section {
     justify-content: center;
 }
 button.custome-subcribe {
-    background-image:var(--grid-color);
+    background-image: var(--grid-color);
     border-radius: 100px;
     padding: 10px 31px;
     border: unset;
     color: #fff;
-    font-size: 22px;
+    font-size: 16px;
     margin-left: 25px;
     font-weight: 500;
     transition: transform 0.3s;
@@ -77,10 +77,13 @@ button.custome-subcribe:hover{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  
 }
 input.form-control.newletter {
-    padding: 14px;
+    padding: 9px 16px;
     border-radius: 100px;
     background: transparent;
     border: 1px solid #83839A;
+}
+input.form-control.newletter::placeholder{
+    font-size: 14px;
 }
 .newletter::placeholder {
     color: #83839A ;

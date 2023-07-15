@@ -4,7 +4,7 @@ import './style.css';
 import '../../App.css';
 import Loginimg from "../../assets/image/loginlogo.png";
 import Google from '../../assets/image/google.png';
-import Insta from '../../assets/image/insta.png';
+import Facebook from '../../assets/image/facebook.png';
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { Alert, Snackbar } from "@mui/material";
@@ -76,7 +76,7 @@ const Popups = (props) => {
         </Alert>
       </Snackbar>
       <div className="popup-overlay">
-        <div className="popup-content">
+        <div className="popup-content setcontent-height">
           <div className='popup-logo pb-2'>
             <div>
               <img src={Loginimg} className="img-fluid" alt="logo">
@@ -175,11 +175,11 @@ const Popups = (props) => {
 
                       </li>
                       <li>
-                        <div className="soical-icon icon-set">
-                          <img src={Insta} className="img-fluid" alt="insta">
+                        <div className="soical-icon">
+                          <img src={Facebook} className="img-fluid" alt="facebook">
                           </img>
                           <p>
-                            Instagram
+                            Facebook
                           </p>
                         </div>
 

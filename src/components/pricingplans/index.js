@@ -33,7 +33,7 @@ const Popupes = (props) => {
                  <div className='pop-section'>
                    <div className="container">
                     <div className="row  justify-content-center">
-                        <div className="col-lg-6 col-md-6 col-12">
+                        <div className="col-lg-5 col-md-6 col-12">
                               <div className="main-plan-section">
                                 <div className="plan-header">
                                     <h4>
@@ -85,7 +85,7 @@ const Popupes = (props) => {
                              </div>
                               </div>
                         </div>
-                        <div className="col-lg-6 col-md-6 col-12">
+                        <div className="col-lg-5 col-md-6 col-12">
                               <div className="main-plan-section">
 
                                 <div className="plan-headers ">

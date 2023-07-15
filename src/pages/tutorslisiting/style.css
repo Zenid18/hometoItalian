@@ -1,0 +1,131 @@
+button#dropdown-basic {
+    border-radius: 100px;
+    border: 1px solid #585867;
+    color: #585867;
+    padding: 4px 21px;
+    margin: 0;
+    font-size: 12px;
+}
+.teacher-detail {
+    font-size: 18px;
+    font-weight: 700;
+}
+.set-top-padding {
+    padding-top: 59px;
+}
+.hashim-setion {
+    border: 1px solid  #24273047;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: relative;
+}
+.hashim-setions {
+    border: 1px solid  #24273047;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    position: relative;
+    margin: 13px 30px 0px 0px;
+}
+h6 {
+    color: #008037;
+}
+.like-section {
+    position: absolute;
+    text-align: 0;
+    /* top: 83px; */
+    right: -34px;
+    bottom: 136px;
+    /* width: 34px; */
+}
+.like-section img {
+    max-width: 73%;
+}
+.Gsinger-detail {
+    padding: 20px 27px;
+}
+.Gsinger-detail h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+.Gsinger-detail p {
+    color: #696984;
+    font-size: 12px;
+}
+.Gsinger-detail h5 {
+    font-size: 13px;
+    color: #696984;
+}
+.Gsinger-details {
+    padding: 20px 27px;
+}
+.hashim-detail h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+.hashim-detail p {
+    color: #696984;
+    font-size: 12px;
+}
+
+.Speaks {
+    color: #000;
+    margin-right: 3px;
+    font-weight: 700;
+}
+.img-section img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.hashim-padding{
+padding-top: 50px;
+}
+.more-btn {
+    color: #fff;
+    background-color: #F55454;
+    border-radius: 100px;
+    border: unset;
+    padding: 9px 48px;
+    font-weight: 500;
+    transition: transform 0.3s;
+}
+.more-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  
+}
+.button-section {
+    text-align: center;
+    margin: 71px 0px 10px 0px;
+}
+.hashim-detail {
+    padding-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.but-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.like-sections {
+    position: absolute;
+    text-align: 0;
+    /* top: 83px; */
+    right: 2px;
+    bottom: 113px;
+    /* width: 34px; */
+}
+.lorem-btn {
+    background: #F55454;
+    color: #fff;
+    border: unset;
+    border-radius: 100px;
+    padding: 2px 12px;
+}
+.slider-padding {
+    padding-top: 23px;
+}

@@ -40,7 +40,7 @@ export const userLogin = (body) => async (dispatch) => {
     }
     if (response) {
       storeData(storageKey?.AUTH_TOKEN, response?.token);
-      storeData(storageKey.USER_DATA, JSON.stringify(response.responce));
+      storeData(storageKey.USER_DATA, JSON.stringify(response.data));
     }
     return response;
 

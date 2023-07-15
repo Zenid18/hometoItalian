@@ -8,12 +8,24 @@ form.searchfrom {
     border-radius: 100px;
     min-width: 26%;
     border: unset;
-    padding: 4px 13px;
+   
+    padding: 4px 6px;
 }
 input.seach-input.form-control {
     border: unset;
     background: transparent;
 }
+input.seach-input.form-control:focus-visible {
+    outline: unset;
+    border: unset;
+}
+input.seach-input.form-control:focus {
+    outline: unset !important;
+    border: u;
+}
+input.seach-input.form-control::placeholder {
+    font-size: 14px;
+  }
 .search-icon {
     background-image: radial-gradient(circle, #f55454, #f04a46, #eb4037, #e53627, #de2c14);
     border-radius: 100px;
@@ -29,16 +41,19 @@ input.seach-input.form-control {
 
 
   }
-a.nav-item.nav-link {
+  a.nav-item.nav-link {
     color: var(--text-green) !important;
-    font-size: 19px;
+    font-size: 15px;
     font-weight: 500;
     white-space: nowrap;
+}
+.login-margin {
+    padding-top: 5px;
 }
 button.custome-btn {
     border-radius: 100px;
     border: unset;
-    padding: 0px 32px;
+    padding: 7px 32px;
     white-space: nowrap;
     font-size: 16px;
 }
@@ -75,4 +90,30 @@ button.sign:hover{
 }
 .from-set{
     display: block;
+}
+.section-afterlogin {
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 7px; */
+}
+.message {
+    margin: 0px 31px 10px 15px;
+}
+.notifiction {
+    margin: 0px 19px 10px 7px;
+}
+.logindrop img {
+    max-width: 42px;
+}
+a.dropdown-item {
+    font-size: 13px;
+}
+a.dropdown-item img {
+    margin-right: 11px;
+    max-width: 11%;
+}
+a.dropdown-item {
+    font-size: 13px;
+    padding: 10px 12px;
+    font-weight: 400;
 }

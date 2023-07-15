@@ -44,7 +44,17 @@ body{
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+button.custome-subcribe {
+  background-image: var(--grid-color);
+  border-radius: 100px;
+  padding: 8px 31px;
+  border: unset;
+  color: #fff;
+  font-size: 14px;
+  margin-left: 0px;
+  font-weight: 500;
+  transition: transform 0.3s;
+}
 .App-link {
   color: #61dafb;
 }

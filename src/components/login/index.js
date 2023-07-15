@@ -4,7 +4,7 @@ import './style.css';
 import '../../App.css';
 import Loginimg from "../../assets/image/loginlogo.png";
 import Google from '../../assets/image/google.png';
-import Insta from '../../assets/image/insta.png';
+
 import Facebook from '../../assets/image/facebook.png'
 import * as Yup from "yup";
 import { useFormik } from "formik";
@@ -34,8 +34,7 @@ const Popup = (props) => {
         password: formik?.values?.password,
 
       }
-      const res = await dispatch(userLogin(body))
-      console.log(res, '?????')
+      const res = await dispatch(userLogin(body)) 
       if (res?.status == 200 || res?.success == true) {
         setShowAlert(true)
         setAlertType(1)
@@ -132,7 +131,7 @@ const Popup = (props) => {
                         </div>
 
                       </li>
-                      <li>
+                      {/* <li>
                         <div className="soical-icon">
                           <img src={Insta} className="img-fluid" alt="insta">
                           </img>
@@ -141,7 +140,7 @@ const Popup = (props) => {
                           </p>
                         </div>
 
-                      </li>
+                      </li> */}
                       <li>
                         <div className="soical-icon">
                           <img src={Facebook} className="img-fluid" alt="facebook">
