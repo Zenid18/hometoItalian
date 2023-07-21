@@ -8,10 +8,10 @@ const Popupes = (props) => {
     return (
       <div className="popup-overlay">
         <div className="popup-content width-set">
-          <div className='popup-logo pb-2'>
+          <div className='popup-logo pb-3'>
                     <div>
                           <div  className="plans">
-                            <h3>Pricing Plans</h3>
+                            <h3 className="text-center">Pricing Plans</h3>
                           </div>
                             <div className="simple-text">
                                 <p>
@@ -20,7 +20,7 @@ const Popupes = (props) => {
                                 </p>
                             </div>
                             <div className="save-detail">
-                                <p> <i class="fa-solid fa-circle-info"></i>
+                                <p className="text-center"> <i class="fa-solid fa-circle-info"></i>
                                      Save upto 17% by selecting yearly pricing.
                                 </p>
                             </div>
@@ -91,7 +91,7 @@ const Popupes = (props) => {
                                 <div className="plan-headers ">
                                     <div className="drop-section">
                                                         <Dropdown>
-                        <Dropdown.Toggle id="dropdown-basic">
+                        <Dropdown.Toggle className="price-yearly" id="dropdown-basic">
                         Yearly
                         </Dropdown.Toggle>
 

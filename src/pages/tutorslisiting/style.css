@@ -19,6 +19,8 @@ button#dropdown-basic {
     background: #fff;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: relative;
+    cursor: pointer;
+   
 }
 .hashim-setions {
     border: 1px solid  #24273047;
@@ -27,6 +29,7 @@ button#dropdown-basic {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: relative;
     margin: 13px 30px 0px 0px;
+    min-height: 400px;
 }
 h6 {
     color: #008037;
@@ -36,7 +39,7 @@ h6 {
     text-align: 0;
     /* top: 83px; */
     right: -34px;
-    bottom: 136px;
+    bottom: -40px;
     /* width: 34px; */
 }
 .like-section img {
@@ -80,6 +83,9 @@ h6 {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
+.img-section {
+    position: relative;
+}
 .hashim-padding{
 padding-top: 50px;
 }
@@ -98,7 +104,7 @@ padding-top: 50px;
 }
 .button-section {
     text-align: center;
-    margin: 71px 0px 10px 0px;
+    margin: 41px 0px 17px 0px;
 }
 .hashim-detail {
     padding-top: 32px;
@@ -114,10 +120,8 @@ padding-top: 50px;
 .like-sections {
     position: absolute;
     text-align: 0;
-    /* top: 83px; */
     right: 2px;
-    bottom: 113px;
-    /* width: 34px; */
+    bottom: -54px;
 }
 .lorem-btn {
     background: #F55454;

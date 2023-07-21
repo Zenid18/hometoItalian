@@ -10,14 +10,18 @@ import { useFormik } from "formik";
 import { Alert, Snackbar } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { userSignUp } from "../../redux/services/AuthService";
-const Popups = (props) => {
+const SignUp = (props) => {
   const dispatch = useDispatch()
   const [show, setShow] = useState(true)
   const [confirmShow, setConfirmShow] = useState(true)
   const [alertMessage, setAlertMessage] = useState("");
   const [showAlert, setShowAlert] = useState(false);
   const [alertType, setAlertType] = useState(0);
-  const formik = useFormik({
+  const moveToLogin = ()=>{
+    props?.setSignUp(false)
+    props?.setLogin(true)
+  }
+  const formik = useFormik({ 
     initialValues: {
       fname: "",
       lname: "",
@@ -47,7 +51,7 @@ const Popups = (props) => {
         setShowAlert(true)
         setAlertType(1)
         setAlertMessage(res?.message)
-        props?.setShow(false)
+        props?.setSignUp(false)
       }
       else {
         setShowAlert(true)
@@ -75,15 +79,15 @@ const Popups = (props) => {
           {alertMessage}
         </Alert>
       </Snackbar>
-      <div className="popup-overlay">
-        <div className="popup-content setcontent-height">
-          <div className='popup-logo pb-2'>
+      <div className="popup-overlay py-2">
+        <div className="popup-content  setcontent-height">
+          <div className='popup-logo pb-3'>
             <div>
               <img src={Loginimg} className="img-fluid" alt="logo">
               </img>
             </div>
             <div>
-              <button onClick={() => props?.setShow(false)} className='close-popup' > <i class="fa-solid fa-xmark"></i>  </button>
+              <button onClick={() => props?.setSignUp(false)} className='close-popup' > <i class="fa-solid fa-xmark"></i>  </button>
             </div>
           </div>
 
@@ -163,34 +167,29 @@ const Popups = (props) => {
                   </div>
                   {/* social-link */}
                   <div className="social-section">
-                    <ul >
-                      <li>
-                        <div className="soical-icon icon-set">
-                          <img src={Google} className="img-fluid" alt="Google">
-                          </img>
-                          <p>
-                            Google
-                          </p>
-                        </div>
-
-                      </li>
-                      <li>
-                        <div className="soical-icon">
-                          <img src={Facebook} className="img-fluid" alt="facebook">
-                          </img>
-                          <p>
-                            Facebook
-                          </p>
-                        </div>
-
-                      </li>
-
-                    </ul>
+                    <div className="d-flex justify-content-center align-items-center gap-4">
+                      <button className="soical-icon py-2 bg-transparent border rounded-pill">
+                        <img
+                          src={Google}
+                          className="img-fluid"
+                          alt="Google"
+                        ></img>
+                        <p className="d-none d-sm-block">Google</p>
+                      </button>
+                      <button className="soical-icon py-2 bg-transparent border rounded-pill">
+                        <img
+                          src={Facebook}
+                          className="img-fluid"
+                          alt="facebook"
+                        ></img>
+                        <p className="d-none d-sm-block">Facebook</p>
+                      </button>
+                    </div>
                   </div>
 
                   <div className="text-center">
                     <p className="an-detail">
-                      Already have an account? <a className="account-detail" href="#">Register </a>
+                      Already have an account? <a onClick={moveToLogin} className="account-detail" href="#">Login</a>
                     </p>
 
                   </div>
@@ -207,4 +206,4 @@ const Popups = (props) => {
 
   );
 };
-export default Popups;
+export default SignUp;

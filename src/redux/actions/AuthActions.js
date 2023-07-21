@@ -26,10 +26,13 @@ export const userLoginLoading = (isLoading) => ({
   isLoading: isLoading,
 });
 
-export const userLoginSuccess = (isLoading) => ({
-  type: USER_LOGIN_SUCCESS,
-  isLoading: isLoading,
-});
+export const userLoginSuccess = (isLoading, data) => {
+  return {
+    type: USER_LOGIN_SUCCESS,
+    isLoading: isLoading,
+    data: data,
+  };
+};
 
 export const userLoginError = (isLoading) => ({
   type: USER_LOGIN_ERROR,

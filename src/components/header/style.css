@@ -18,10 +18,12 @@ input.seach-input.form-control {
 input.seach-input.form-control:focus-visible {
     outline: unset;
     border: unset;
+    box-shadow: unset;
 }
 input.seach-input.form-control:focus {
-    outline: unset !important;
-    border: u;
+    outline: unset;
+    border: unset;
+    box-shadow: unset;
 }
 input.seach-input.form-control::placeholder {
     font-size: 14px;
@@ -47,8 +49,8 @@ input.seach-input.form-control::placeholder {
     font-weight: 500;
     white-space: nowrap;
 }
-.login-margin {
-    padding-top: 5px;
+.nav-logo{
+        transform: translate(0px, -6px);
 }
 button.custome-btn {
     border-radius: 100px;
@@ -61,13 +63,33 @@ button.login {
     background: #fff !important;
     color: #000 !important;
     transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
     margin-left: 11px;
+        overflow: hidden;
+    z-index: 0;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
-button.login:hover{
-        transform: translateY(-3px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+button.login::before{
+    content: '';
+    position: absolute;
+    border-radius: 100px;
+    width: 100%;
+    height: 40px;
+    z-index: -1;
+    bottom: -40px;
+    left: 0;
+    transition: .15s background-color,
+        .2s bottom;
+        transform: rotate(180deg);
+        background-image: radial-gradient(circle, #f55454, #f04a46, #eb4037, #e53627, #de2c14) !important;
 }
+button.login:hover::before{
+        bottom: 0;
+}
+button.login:hover{
+        color: #fff !important;
+}
+
 button.sign{
     transition: transform 0.3s;
     background-image: radial-gradient(circle, #f55454, #f04a46, #eb4037, #e53627, #de2c14) !important;
@@ -78,6 +100,7 @@ button.sign:hover{
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
 .seach-input:focus {
     color: unset;
     background-color:unset;
@@ -96,12 +119,6 @@ button.sign:hover{
     align-items: center;
     /* margin-bottom: 7px; */
 }
-.message {
-    margin: 0px 31px 10px 15px;
-}
-.notifiction {
-    margin: 0px 19px 10px 7px;
-}
 .logindrop img {
     max-width: 42px;
 }
@@ -116,4 +133,10 @@ a.dropdown-item {
     font-size: 13px;
     padding: 10px 12px;
     font-weight: 400;
+}
+.navbar-nav .dropdown-menu{
+    position: absolute !important;
+}
+nav{
+    box-shadow: darkgrey 0 0 6px -2px;
 }

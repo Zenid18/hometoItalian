@@ -1,6 +1,6 @@
 .case-detail{
     color: var(--theme-color);
-    font-size: 46px;
+    font-size: 40px;
     font-weight: 700;
 }
 
@@ -42,21 +42,24 @@
     }
 
 }
+.verified-details{
+    font-size: 22px;
+}
 .reconnect-details{
     color:#464646;
-    font-size: 21px;
+    font-size: 17px;
     padding: 21px 0px 18px 0px;
     font-family: 'Nunito Sans', sans-serif;
 }
 .custome-iqvs {
     background-image: var(--grid-color);
     color: #fff;
-    font-size: 22px;
+    font-size: 18px !important;
     font-weight: 500 !important;
     border-radius: 100px !important;
     border: unset !important;
     padding: 11px 31px !important;
-    transition: transform 0.3s;
+    transition: all 0.3s ease !important;
     margin-top: 10px;
 }
 .custome-iqvs:hover{
@@ -69,10 +72,13 @@
 }
 .head-section {
     position: absolute;
-    bottom: 65px;
+    bottom: 37px;
     left: -76px;
     -webkit-animation: mover 1s infinite  alternate;
     animation: mover 1s infinite  alternate;
+}
+.case-img{
+    
 }
 @-webkit-keyframes mover {
     0% { transform: translateY(0); }
@@ -114,14 +120,14 @@
 }
 p.skill-details {
     text-align: center;
-    font-size: 21px;
+    font-size: 19px;
     color: #696984;
 }
 .verified-section {
     position: relative;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 10px;
-    min-height: 290px;
+    min-height: 270px;
     text-align: center;
     padding: 6px 20px;
     margin-right: 22px;
@@ -155,7 +161,7 @@ p.skill-details {
 
 p.community-details {
     padding: 12px 28px 0px 19px;
-    font-size: 18px;
+    font-size: 16px;
     color: #696984;
 }
 .verified-margin {
@@ -210,7 +216,7 @@ section.find-margin {
 }
 .program-detail p{
     color: #696984;
-    font-size: 19px;
+    font-size: 16px;
     letter-spacing: 1px;
     margin: 0;
    
@@ -228,7 +234,7 @@ section.find-margin {
 }
 .courses-detail{
     color: #696984;
-    font-size: 20px;
+    font-size: 17px;
 }
 .Couresimg-section {
     position: relative;
@@ -384,7 +390,7 @@ section.find-margin {
 }
 p.help-detail {
     color: #5F5F7E;
-    font-size: 18px;
+    font-size: 16px;
     border-left: 1px solid #BDBDD1;
     padding: 0px 0px 0px 23px;
     margin-left: 18px;
@@ -408,12 +414,12 @@ button.custome-view {
     border: 1px solid #D30000;
     padding: 0px 0px 0px 17px;
     color: #D30000;
-    font-size: 22px;
+    font-size: 17px;
 }
 .fa-arrow-right {
     border: 1px solid #D30000;
     border-radius: 100px;
-    padding: 20px;
+    padding: 14px;
     margin-left:50px;
 }
 .view-btn {
