@@ -22,19 +22,19 @@ import { useDispatch, useSelector } from "react-redux";
 import { getTecherList } from "../../redux/services/otherServices/TeacherManagement";
 import * as url from "../../constants/urls";
 const Tutors = () => {
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [teacherData, setTeacherData] = useState([]);
   const [teacherShow, setTeacherShow] = useState(true);
   const isLoading = useSelector((state) => state.authReducer.isLoading);
 
-    useEffect(() => {
-      handleTeacherData();
+  useEffect(() => {
+    handleTeacherData();
     window.scrollTo(0, 0);
-    }, []);
+  }, []);
 
   const handleTeacherData = async () => {
-    const res = await dispatch(getTecherList()); 
+    const res = await dispatch(getTecherList());
     if (res?.status == 200 || res?.success == true) {
       setTeacherData(res?.data);
       setTeacherShow(true);
@@ -42,10 +42,10 @@ const Tutors = () => {
       setTeacherShow(false);
     }
   };
-  
-    const navigateTutors = (id) => {
-      navigate("/description", { state: id });
-    };
+
+  const navigateTutors = (id) => {
+    navigate("/description", { state: id });
+  };
 
   const settings = {
     dots: true,
@@ -83,7 +83,6 @@ const Tutors = () => {
       // instead of a settings object
     ],
   };
-
 
   return (
     <section>
@@ -187,285 +186,288 @@ const Tutors = () => {
                 )}
               </div>
             </div>
+          </div>
+          {/*teacher-section-end  */}
 
-            {/* Ginger Hashim.. */}
+          {/* Ginger Hashim.. */}
 
-            {/* button-section */}
-            {teacherShow ? (
-              <div className="conatiner">
-                <div className="row align-items-center justify-contnet-center">
-                  <div className="col-lg-12">
-                    <div className="button-section">
-                      <button className="more-btn" type="submit">
-                        More Teachers
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ) : (
-              ""
-            )}
-            {/* end */}
-
-            {/* Trending courses */}
-            <div className="container">
-              <div className="row align-items-center justify-content-start set-top-padding">
-                <div className="col-lg-6 p-0">
-                  <div className="teacher-section">
-                    <h4 className="teacher-detail">Trending courses</h4>
+          {/* button-section */}
+          {teacherShow ? (
+            <div className="conatiner">
+              <div className="row align-items-center justify-contnet-center">
+                <div className="col-lg-12">
+                  <div className="button-section">
+                    <button className="more-btn" type="submit">
+                      More Teachers
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
-            {/* Trending courses */}
+          ) : (
+            ""
+          )}
+          {/* end */}
 
-            {/* slider */}
-            <div className="container p-0">
-              <div className="row align-items-center justify-content-center slider-padding">
-                <div className="col-lg-12">
-                  <Slider {...settings}>
-                    <div>
-                      <div className="hashim-setions tutors-slider ">
-                        <div className="img-section position-relative">
-                          <img
-                            src={Slidera}
-                            className="img-fluid"
-                            alt="Ginger Hashim.."
-                          />
-                          <div className="like-sections">
-                            <img src={Like} className="img-fluid" alt="like" />
+          {/* Trending courses */}
+          <div className="container">
+            <div className="row align-items-center justify-content-start set-top-padding">
+              <div className="col-lg-6 p-0">
+                <div className="teacher-section">
+                  <h4 className="teacher-detail">Trending courses</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Trending courses */}
+
+          {/* slider */}
+          {/* slider */}
+          <div className="container p-0">
+            <div className="row align-items-center justify-content-center slider-padding">
+              <div className="col-lg-12">
+                <Slider {...settings}>
+                  <div>
+                    <div className="hashim-setions">
+                      <div className="img-section">
+                        <img
+                          src={Slidera}
+                          className="img-fluid"
+                          alt="Ginger Hashim.."
+                        />
+                        <div className="like-sections">
+                          <img src={Like} className="img-fluid" alt="like" />
+                        </div>
+                      </div>
+
+                      <div className="Gsinger-details">
+                        <div className="hashim-detail">
+                          <div>
+                            <h2>Ginger Hashim..</h2>
+                          </div>
+                          <div>
+                            <h6>$80</h6>
                           </div>
                         </div>
-
-                        <div className="Gsinger-details">
-                          <div className="hashim-detail">
-                            <div>
-                              <h2>Ginger Hashim..</h2>
-                            </div>
-                            <div>
-                              <h6 className="pe-2">$80</h6>
-                            </div>
+                        <div className="but-section">
+                          <div>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisc
+                              ingelit. Sed neque egestas sem.
+                            </p>
                           </div>
-                          <div className="but-section">
-                            <div>
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisc
-                                ingelit. Sed neque egestas sem.
-                              </p>
-                            </div>
-                            <div>
-                              <button type="submit" className="lorem-btn">
-                                Buy
-                              </button>
-                            </div>
+                          <div>
+                            <button type="submit" className="lorem-btn">
+                              Buy
+                            </button>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div>
-                      <div className="hashim-setions">
-                        <div className="img-section">
-                          <img
-                            src={Sliderb}
-                            className="img-fluid"
-                            alt="Ginger Hashim.."
-                          />
-                          <div className="like-sections">
-                            <img src={Like} className="img-fluid" alt="like" />
-                          </div>
+                  </div>
+                  <div>
+                    <div className="hashim-setions">
+                      <div className="img-section">
+                        <img
+                          src={Sliderb}
+                          className="img-fluid"
+                          alt="Ginger Hashim.."
+                        />
+                        <div className="like-sections">
+                          <img src={Like} className="img-fluid" alt="like" />
                         </div>
+                      </div>
 
-                        <div className="Gsinger-details">
-                          <div className="hashim-detail">
-                            <div>
-                              <h2>Ginger Hashim..</h2>
-                            </div>
-                            {/* <div >
+                      <div className="Gsinger-details">
+                        <div className="hashim-detail">
+                          <div>
+                            <h2>Ginger Hashim..</h2>
+                          </div>
+                          {/* <div >
                         <h6>
                             $80
                         </h6>
                        </div> */}
+                        </div>
+                        <div className="but-section">
+                          <div>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisc
+                              ingelit. Sed neque egestas sem.
+                            </p>
                           </div>
-                          <div className="but-section">
-                            <div>
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisc
-                                ingelit. Sed neque egestas sem.
-                              </p>
-                            </div>
-                            {/* <div>
+                          {/* <div>
                                 <button type='submit' className='lorem-btn'>
                                 Buy
                                 </button>
                             </div> */}
-                          </div>
                         </div>
                       </div>
                     </div>
+                  </div>
 
-                    <div>
-                      <div className="hashim-setions">
-                        <div className="img-section">
-                          <img
-                            src={Sliderc}
-                            className="img-fluid"
-                            alt="Ginger Hashim.."
-                          />
-                          <div className="like-sections">
-                            <img src={Like} className="img-fluid" alt="like" />
-                          </div>
+                  <div>
+                    <div className="hashim-setions">
+                      <div className="img-section">
+                        <img
+                          src={Sliderc}
+                          className="img-fluid"
+                          alt="Ginger Hashim.."
+                        />
+                        <div className="like-sections">
+                          <img src={Like} className="img-fluid" alt="like" />
                         </div>
+                      </div>
 
-                        <div className="Gsinger-details">
-                          <div className="hashim-detail">
-                            <div>
-                              <h2>Ginger Hashim..</h2>
-                            </div>
-                            {/* <div >
+                      <div className="Gsinger-details">
+                        <div className="hashim-detail">
+                          <div>
+                            <h2>Ginger Hashim..</h2>
+                          </div>
+                          {/* <div >
                         <h6>
                             $80
                         </h6>
                        </div> */}
+                        </div>
+                        <div className="but-section">
+                          <div>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisc
+                              ingelit. Sed neque egestas sem.
+                            </p>
                           </div>
-                          <div className="but-section">
-                            <div>
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisc
-                                ingelit. Sed neque egestas sem.
-                              </p>
-                            </div>
-                            {/* <div>
+                          {/* <div>
                                 <button type='submit' className='lorem-btn'>
                                 Buy
                                 </button>
                             </div> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="hashim-setions">
+                      <div className="img-section">
+                        <img
+                          src={Slidera}
+                          className="img-fluid"
+                          alt="Ginger Hashim.."
+                        />
+                        <div className="like-sections">
+                          <img src={Like} className="img-fluid" alt="like" />
+                        </div>
+                      </div>
+
+                      <div className="Gsinger-details">
+                        <div className="hashim-detail">
+                          <div>
+                            <h2>Ginger Hashim..</h2>
+                          </div>
+                          <div>
+                            <h6>$80</h6>
+                          </div>
+                        </div>
+                        <div className="but-section">
+                          <div>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisc
+                              ingelit. Sed neque egestas sem.
+                            </p>
+                          </div>
+                          <div>
+                            <button type="submit" className="lorem-btn">
+                              Buy
+                            </button>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div>
-                      <div className="hashim-setions">
-                        <div className="img-section">
-                          <img
-                            src={Slidera}
-                            className="img-fluid"
-                            alt="Ginger Hashim.."
-                          />
-                          <div className="like-sections">
-                            <img src={Like} className="img-fluid" alt="like" />
-                          </div>
-                        </div>
-
-                        <div className="Gsinger-details">
-                          <div className="hashim-detail">
-                            <div>
-                              <h2>Ginger Hashim..</h2>
-                            </div>
-                            <div>
-                              <h6 className="pe-2">$80</h6>
-                            </div>
-                          </div>
-                          <div className="but-section">
-                            <div>
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisc
-                                ingelit. Sed neque egestas sem.
-                              </p>
-                            </div>
-                            <div>
-                              <button type="submit" className="lorem-btn">
-                                Buy
-                              </button>
-                            </div>
-                          </div>
+                  </div>
+                  <div>
+                    <div className="hashim-setions">
+                      <div className="img-section">
+                        <img
+                          src={Sliderb}
+                          className="img-fluid"
+                          alt="Ginger Hashim.."
+                        />
+                        <div className="like-sections">
+                          <img src={Like} className="img-fluid" alt="like" />
                         </div>
                       </div>
-                    </div>
-                    <div>
-                      <div className="hashim-setions">
-                        <div className="img-section">
-                          <img
-                            src={Sliderb}
-                            className="img-fluid"
-                            alt="Ginger Hashim.."
-                          />
-                          <div className="like-sections">
-                            <img src={Like} className="img-fluid" alt="like" />
-                          </div>
-                        </div>
 
-                        <div className="Gsinger-details">
-                          <div className="hashim-detail">
-                            <div>
-                              <h2>Ginger Hashim..</h2>
-                            </div>
-                            {/* <div >
+                      <div className="Gsinger-details">
+                        <div className="hashim-detail">
+                          <div>
+                            <h2>Ginger Hashim..</h2>
+                          </div>
+                          {/* <div >
                         <h6>
                             $80
                         </h6>
                        </div> */}
+                        </div>
+                        <div className="but-section">
+                          <div>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisc
+                              ingelit. Sed neque egestas sem.
+                            </p>
                           </div>
-                          <div className="but-section">
-                            <div>
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisc
-                                ingelit. Sed neque egestas sem.
-                              </p>
-                            </div>
-                            {/* <div>
+                          {/* <div>
                                 <button type='submit' className='lorem-btn'>
                                 Buy
                                 </button>
                             </div> */}
-                          </div>
                         </div>
                       </div>
                     </div>
+                  </div>
 
-                    <div>
-                      <div className="hashim-setions">
-                        <div className="img-section">
-                          <img
-                            src={Sliderc}
-                            className="img-fluid"
-                            alt="Ginger Hashim.."
-                          />
-                          <div className="like-sections">
-                            <img src={Like} className="img-fluid" alt="like" />
-                          </div>
+                  <div>
+                    <div className="hashim-setions">
+                      <div className="img-section">
+                        <img
+                          src={Sliderc}
+                          className="img-fluid"
+                          alt="Ginger Hashim.."
+                        />
+                        <div className="like-sections">
+                          <img src={Like} className="img-fluid" alt="like" />
                         </div>
+                      </div>
 
-                        <div className="Gsinger-details">
-                          <div className="hashim-detail">
-                            <div>
-                              <h2>Ginger Hashim..</h2>
-                            </div>
-                            {/* <div >
+                      <div className="Gsinger-details">
+                        <div className="hashim-detail">
+                          <div>
+                            <h2>Ginger Hashim..</h2>
+                          </div>
+                          {/* <div >
                         <h6>
                             $80
                         </h6>
                        </div> */}
+                        </div>
+                        <div className="but-section">
+                          <div>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisc
+                              ingelit. Sed neque egestas sem.
+                            </p>
                           </div>
-                          <div className="but-section">
-                            <div>
-                              <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisc
-                                ingelit. Sed neque egestas sem.
-                              </p>
-                            </div>
-                            {/* <div>
+                          {/* <div>
                                 <button type='submit' className='lorem-btn'>
                                 Buy
                                 </button>
                             </div> */}
-                          </div>
                         </div>
                       </div>
                     </div>
-                  </Slider>
+                  </div>
+                </Slider>
 
-                  {/* <div className='hashim-setion'>
+                {/* <div className='hashim-setion'>
                     <div className='img-section'>
                         <img src={Gsingerashimc}className='img-fluid' alt='Ginger Hashim..' />
                         <div className='like-section'>
@@ -502,11 +504,8 @@ const Tutors = () => {
                            
                      </div>
                  </div> */}
-                </div>
               </div>
             </div>
-
-            {/* end */}
           </div>
         </div>
       </section>
