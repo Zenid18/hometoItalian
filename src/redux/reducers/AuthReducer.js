@@ -25,8 +25,6 @@ const initialState = {
 
 export const authReducer = (state = initialState, action) => {
   switch (action.type) {
-
-
     case USER_LOGIN_LOADING:
       return {
         ...state,
@@ -37,6 +35,7 @@ export const authReducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: action.isLoading,
+        data: action.data,
       };
 
     case USER_LOGIN_ERROR:
@@ -131,7 +130,6 @@ export const authReducer = (state = initialState, action) => {
         ...state,
         isLoading: action.isLoading,
       };
-
 
     default:
       return state;

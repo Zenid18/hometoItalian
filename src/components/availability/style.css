@@ -1,0 +1,35 @@
+.availability{
+background: var(--bg-color);
+box-shadow:0px 0px 20px 0px rgba(0, 128, 55, 0.10);
+height: 500px;
+}
+.availability-heading{
+    background: var(--iqa-color);
+    color: var(--bg-color);
+    font-weight: 600;
+    font-size: 17px;
+}
+.buy-slot-btn-box button{
+    background: var(--grid-color);
+    color: var(--bg-color);
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.buy-slot-btn-box button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.meeting-time{
+    color: #B2BBC8;
+}
+.meeting-para{
+    background: #E1FFEE;
+}
+.meeting-para p{
+  font-weight: 700;
+}
+.meeting-para span{
+  font-weight: 600;
+  font-size: 14px;
+}

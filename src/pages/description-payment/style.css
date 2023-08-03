@@ -1,0 +1,61 @@
+.description-payment{
+    background: #F8FAFB;
+}
+.description-payment-box{
+    background-color: var(--bg-color);
+}
+.type-of-payment-form .form-label{
+        color: #585867;
+        font-weight: 500;
+        font-size: 14px;
+}
+.type-of-payment-form input:focus, .type-of-payment-form input:focus-visible {    
+        border:1px solid #dee2e6 ;
+    box-shadow: unset;
+    outline: unset;
+}
+.description-paymen-heading{
+        font-size: 24px;
+            font-weight: 700;
+}
+.description-payment-para{
+    font-size: 15px;
+    color: #585867;
+}
+.check-box .form-check{
+        padding-left: 35px;
+}
+.papal-img{
+    width: 85px;
+}
+.check-box .form-check-label{
+        padding: 12px 0px 12px 0px;
+        color: #585867;
+        font-size: 15px;
+            font-weight: 500;
+}
+.check-box .form-check-input{
+        margin-top: 16px;
+}
+.description-payment-box p{
+    color: #585867;
+}
+.payment-submit-btn{
+    background: var(--grid-color);
+        color: var(--bg-color);
+        font-size: 18px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+}
+.payment-submit-btn:hover{
+    transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.order-details p span{
+   color: var(--dark-text);
+   font-weight: 500;
+}
+.order-details p {
+    color: #585867;
+    font-size: 15px;
+}

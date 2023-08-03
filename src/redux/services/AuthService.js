@@ -33,12 +33,11 @@ export const userLogin = (body) => async (dispatch) => {
     const message = response.message;
 
     if (response.success == true || response?.status == 200) {
-      dispatch(userLoginSuccess(false));
+      dispatch(userLoginLoading(false));
       console.log(response, "LOGIN_API-----------");
-    } else {
-      dispatch(userLoginSuccess(false));
-    }
+    }  
     if (response) {
+          dispatch(userLoginSuccess(false, response?.token));
       storeData(storageKey?.AUTH_TOKEN, response?.token);
       storeData(storageKey.USER_DATA, JSON.stringify(response.data));
     }
@@ -60,10 +59,15 @@ export const userSignUp = (body) => async (dispatch) => {
     if (response.success == true || response?.status == 200) {
       dispatch(userSignUpSuccess(false));
       console.log(response, "SIGN_UP_API-----------");
-      return response;
+     
     } else {
-      dispatch(userLoginSuccess(false));
+      dispatch(userSignUpSuccess(false));
     }
+     if (response) {
+      storeData(storageKey?.AUTH_TOKEN, response?.token);
+      storeData(storageKey.USER_DATA, JSON.stringify(response.data));
+    }
+    return response;
   } catch (error) {
     // console.log(error, 'err-----------');
     dispatch(userSignUpError(false));

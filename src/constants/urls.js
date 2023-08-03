@@ -1,6 +1,6 @@
-export const BASE_URL = "http://hometoitalian.com/index/"
-export const LOGIN_API = "login";
-export const SIGN_UP = "signup"
+export const BASE_URL = "http://hometoitalian.com"
+export const LOGIN_API = "/index/login";
+export const SIGN_UP = "/index/signup"
 export const FORGOTPASS_API = "/admin_forgot_password";
 export const ACCOUNT_DETAILS = "/admin_detail";
 export const ACCOUNT_UPDATE = "/admin_update_profile";
@@ -14,6 +14,10 @@ export const ADD_STUDENT = "/signup"
 export const STU_DEATIL = "/student_detail"
 export const DEL_STU = "/student_delete"
 export const EDIT_STU = "/student_edit";
+
+// Teaccher Mangenent
+export const GET_TEACHERLIST = "/index/teacher_list";
+export const POST_TEACHERDETAIL = "/index/teacher_detial";
 
 // events
 export const GET_EVENTS = "/admin_event_list"

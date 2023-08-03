@@ -1,116 +1,123 @@
 .popup-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999; 
-  }
-  .popup-content {
-    position: relative;
-    background-color: var(--bg-color) !important;
-    padding: 32px 54px 32px 54px;
-    border-radius: 24px;
-    width: 605px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 8888;
 }
-  .popup-content .close-popup svg {
-    background-color: #B286FF5C;
-    fill: white;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    padding: 5px;
-  }
-  .popup-logo.pb-2 {
-    text-align: center;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .popup-content .close-popup {
-    border: 0;
-    border-radius: 50%;
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    color: #fdfdfd;
-    background: #00000033;
-    height: 35px;
-    width: 35px;
+
+.popup-content {
+  position: relative;
+  background-color: var(--bg-color) !important;
+  padding: 30px 54px 12px 54px;
+  border-radius: 24px;
+  width: 605px;
 }
-  .login-from input  {
-    border: unset !important;
-    background: transparent;
+
+.popup-content .close-popup svg {
+  background-color: #B286FF5C;
+  fill: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
 }
-.login-from input:focus{
-    box-shadow: unset;
+
+.popup-logo.pb-2 {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
 }
+
+.popup-content .close-popup {
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fdfdfd;
+  background: #00000033;
+  height: 35px;
+  width: 35px;
+}
+
+.login-from input {
+  border: unset !important;
+  background: transparent;
+}
+
+.login-from input:focus {
+  box-shadow: unset;
+}
+
 .login-from {
-    display: flex;
-    align-items: center;
-    border: 1px solid #fff; 
-    background-color: var(--form-bg); 
-    border-radius: 100px;
-    padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #fff;
+  background-color: var(--form-bg);
+  border-radius: 100px;
+  padding: 5px 10px;
 }
+
 .set-top {
-    margin-top: 18px;
+  margin-top: 18px;
 }
+
 .icon {
-    padding-right: 12px;
+  padding-right: 12px;
 }
-  .popup-content form .popup-form input{
-    width: 100%;
-  }
-  .loginbtn {
-    background-image: linear-gradient(to right, #f55454, #f24f4a, #ee4a40, #ea4636, #e5422b) !important;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 600;
-    padding: 10px 20px;
-    border-radius: 100px;
-    margin: 19px 1px 7px 0px;
+
+.popup-content form .popup-form input {
+  width: 100%;
 }
+
+.loginbtn {
+  background-image: linear-gradient(to right, #f55454, #f24f4a, #ee4a40, #ea4636, #e5422b) !important;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 9px 20px;
+  border-radius: 100px;
+  margin: 15px 1px 7px 0px;
+}
+
 .popup-content .forget {
-    text-align: end;
+  text-align: end;
 }
+
 .popup-content .forget .forget-detail {
-    color: #2F327D;
-    font-size: 15px;
-    
-    text-decoration: none;
+  color: #2F327D;
+  font-size: 15px;
+
+  text-decoration: none;
 }
+
 .an-detail {
-  font-size: 14px;
+  font-size: 12px;
   color: #A1A1A1;
   font-weight: 600;
-  margin: 27px 0px -1px 0px;
+  margin: 12px 0px -1px 0px;
 }
+
 a.account-detail {
-    color: #FF1010;
-    text-decoration: none;
+  color: #FF1010;
+  text-decoration: none;
 }
-.social-section ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 .soical-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 200px;
   border: 1px solid #E8E8E8;
-  border-radius: 100px;
-  padding: 10px 8px;
-  margin: 8px 21px;
 }
+
 .soical-icon p {
   margin: 0;
   padding: 0;
@@ -119,6 +126,41 @@ a.account-detail {
   font-size: 12px;
   font-weight: 600;
 }
+
 .soical-icon img {
-  max-width: 26%;
+  width: 30px;
+}
+
+.input-box input {
+  border: 1px solid transparent;
+  background: var(--l-grey);
+  font-size: var(--fs-15);
+}
+
+.input-box input::placeholder {
+  color: var(--grey) !important;
+}
+
+.input-box input:focus, .input-box input:focus-visible {
+  border: 1px solid var(--red) !important;
+  background-color: var(--l-pink);
+  outline: unset;
+}
+
+.input-box input:focus::placeholder {
+  background-color: var(--l-pink);
+  color: var(--black);
+}
+
+.input-box .pass-btn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  height: 40px;
+}
+.transition{
+  transition: all 0.3s ease;
+}
+.error-border{
+  border: 1px solid var(--red) !important;
 }

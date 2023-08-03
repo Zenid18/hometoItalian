@@ -52,7 +52,6 @@ export const post = async (url, token, body, hide = false) => {
       body: data,
     });
     const response = await res.json();
-    console.log(res, "resssssssssssssss");
     if (response.statusCode == 401) {
       window.location.replace("/");
     }

@@ -15,18 +15,20 @@ button#dropdown-basic {
 }
 .hashim-setion {
     border: 1px solid  #24273047;
-    border-radius: 10px;
+    border-radius: 14px;
     background: #fff;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: relative;
+    cursor: pointer;
+   
 }
 .hashim-setions {
     border: 1px solid  #24273047;
     border-radius: 10px;
     background: #fff;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(149, 157, 165, 0.2) 3px 28px 15px;
     position: relative;
-    margin: 13px 30px 0px 0px;
+margin: 13px 12px 0px 12px;
+    min-height: 404px;
 }
 h6 {
     color: #008037;
@@ -36,7 +38,7 @@ h6 {
     text-align: 0;
     /* top: 83px; */
     right: -34px;
-    bottom: 136px;
+    bottom: -40px;
     /* width: 34px; */
 }
 .like-section img {
@@ -59,7 +61,7 @@ h6 {
     color: #696984;
 }
 .Gsinger-details {
-    padding: 20px 27px;
+    padding: 20px 10px 20px 20px
 }
 .hashim-detail h2 {
     font-size: 18px;
@@ -80,6 +82,9 @@ h6 {
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 }
+.img-section {
+    position: relative;
+}
 .hashim-padding{
 padding-top: 50px;
 }
@@ -98,7 +103,7 @@ padding-top: 50px;
 }
 .button-section {
     text-align: center;
-    margin: 71px 0px 10px 0px;
+    margin: 35px 0px 17px 0px;
 }
 .hashim-detail {
     padding-top: 32px;
@@ -114,18 +119,41 @@ padding-top: 50px;
 .like-sections {
     position: absolute;
     text-align: 0;
-    /* top: 83px; */
     right: 2px;
-    bottom: 113px;
-    /* width: 34px; */
+    bottom: -54px;
 }
 .lorem-btn {
     background: #F55454;
     color: #fff;
     border: unset;
     border-radius: 100px;
-    padding: 2px 12px;
+    padding: 6px 20px;
 }
 .slider-padding {
     padding-top: 23px;
+}
+.teachers-box .img-section .main-img{
+height: 280px;
+width: 100%;
+transition: all 0.3s ease;
+object-fit: cover;
+}
+.teachers-box:hover .img-section .main-img{
+    transform: scale(1.2);
+}
+.teachers-box:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.tutors-slider .img-section::before{
+    position: absolute;
+        content: '';
+        width: 9%;
+        height: 12%;
+        top: 17px;
+        z-index: 1;
+        left: 20px;
+    background: url("../../assets/image/king-icon.png") no-repeat;
+}
+.tutors-slider .img-section{
+    z-index: 0;
 }

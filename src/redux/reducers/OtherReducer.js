@@ -69,6 +69,7 @@ import {
   OPERATE_OFFERS_SUCCESS,
 } from "../constants/otherActionTypes/Offers";
 import { OPERATE_STUDENT_ERROR, OPERATE_STUDENT_LOADING, OPERATE_STUDENT_SUCCESS } from "../constants/otherActionTypes/Students";
+import { OPERATE_TEACHER_ERROR, OPERATE_TEACHER_LOADING, OPERATE_TEACHER_SUCCESS } from "../constants/otherActionTypes/TeacherManagement";
 const initialState = {
   isLoading: false,
   classData: null,
@@ -99,7 +100,6 @@ export const otherReducer = (state = initialState, action) => {
         ...state,
         isLoading: action.isLoading,
       };
-
     case OPERATE_DASHBOARD_SUCCESS:
       return {
         ...state,
@@ -111,6 +111,28 @@ export const otherReducer = (state = initialState, action) => {
         ...state,
         isLoading: action.isLoading,
       };
+
+    // Teacher Management
+    
+
+    case OPERATE_TEACHER_LOADING:
+      return {
+        ...state,
+        isLoading: action.isLoading,
+      };
+
+    case OPERATE_TEACHER_SUCCESS:
+      return {
+        ...state,
+        isLoading: action.isLoading,
+      };
+
+    case OPERATE_TEACHER_ERROR:
+      return {
+        ...state,
+        isLoading: action.isLoading,
+      };
+
     case OPERATE_STUDENT_LOADING:
       return {
         ...state,

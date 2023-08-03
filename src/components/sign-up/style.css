@@ -20,6 +20,7 @@
     border: unset !important;
     background: #f6f6f6 !important;
     padding: 2px 10px;
+    font-size: 16px;
 }
 
 .error.danger {

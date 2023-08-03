@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 .App {
   text-align: center;
 }
@@ -13,8 +14,17 @@ body{
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
 }
+.pointer{
+  cursor: pointer !important;
+}
 :root{
   --bg-color:#fff;
+  --black: #000;
+  --d-grey: #787A8D;
+  --l-pink: #fff3f9;
+  --red: #D30000;
+  --l-grey: #F6F6F6;
+  --grey: #C9C9C9;
   --theme-color:#FF1616;
   --text-green:#159800;
   --dark-text:#000000;
@@ -27,6 +37,7 @@ body{
   height: 40vmin;
   pointer-events: none;
 }
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -57,6 +68,9 @@ button.custome-subcribe {
 }
 .App-link {
   color: #61dafb;
+}
+.css-zzms1-MuiSnackbar-root{
+  z-index: 100000 !important;
 }
 
 @keyframes App-logo-spin {
@@ -307,9 +321,6 @@ section.copyright-section {
 }
 .pop-section {
   padding: 0px !important;
-}
-.soical-icon p {
-  display: none !important;
 }
 .form-bg {
   padding: 28px !important;
