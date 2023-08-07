@@ -6,15 +6,14 @@ import Loginimg from "../../assets/image/loginlogo.png";
 import Google from "../../assets/image/google.png";
 import Facebook from "../../assets/image/facebook.png";
 import * as Yup from "yup";
-import { useFormik } from "formik"; 
+import { useFormik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import { userLogin } from "../../redux/services/AuthService";
 import { toast } from "react-toastify";
 const Login = (props) => {
   const dispatch = useDispatch();
-  const [show, setShow] = useState(true); 
+  const [show, setShow] = useState(true);
   const [showPassLogin, setShowPassLogin] = useState(false);
-  const isLoading = useSelector((state) => state.authReducer.isLoading);
   const moveToSignUp = () => {
     props?.setLogin(false);
     props?.setSignUp(true);
@@ -43,7 +42,7 @@ const Login = (props) => {
         toast.success(res?.message)
         props?.setLogin(false);
       } else {
-         toast.error(res?.message);
+        toast.error(res?.message);
       }
     },
   });
@@ -51,7 +50,7 @@ const Login = (props) => {
     setShow(!show);
   };
   return (
-    <> 
+    <>
       <div className="popup-overlay">
         <div className="popup-content">
           <div className="popup-logo pb-3">
@@ -70,9 +69,6 @@ const Login = (props) => {
           </div>
 
           <div className="pop-section">
-            {/* <div>
-                      <img src={Popimg} className='img-fluid' alt='pop'></img>
-                    </div> */}
             <div>
               <form onSubmit={formik.handleSubmit}>
                 <div className="row align-items-center justify-content-center">
@@ -84,11 +80,10 @@ const Login = (props) => {
                       onBlur={formik.handleBlur}
                       onChange={formik.handleChange}
                       name="email"
-                      className={`w-100 py-2 ps-4 rounded-pill transition ${
-                        formik.touched.email && formik.errors.email
-                          ? "error-border"
-                          : ""
-                      }`}
+                      className={`w-100 py-2 ps-4 rounded-pill transition ${formik.touched.email && formik.errors.email
+                        ? "error-border"
+                        : ""
+                        }`}
                     />
                     <span className="pass-btn pass-btn rounded-pill pe-3 d-flex align-items-center">
                       <svg
@@ -119,11 +114,10 @@ const Login = (props) => {
                       onBlur={formik.handleBlur}
                       onChange={formik.handleChange}
                       name="password"
-                      className={`w-100 py-2 ps-4 rounded-pill transition ${
-                        formik.touched.password && formik.errors.password
-                          ? "error-border"
-                          : ""
-                      }`}
+                      className={`w-100 py-2 ps-4 rounded-pill transition ${formik.touched.password && formik.errors.password
+                        ? "error-border"
+                        : ""
+                        }`}
                     />
                     <button
                       type="button"
@@ -181,13 +175,7 @@ const Login = (props) => {
                       className="loginbtn form-control d-flex align-items-center justify-content-center shadow-none"
                       size="lg"
                     >
-                      {isLoading ? (
-                        <div class="spinner-border" role="status">
-                          <span class="visually-hidden">Loading...</span>
-                        </div>
-                      ) : (
-                        "Login"
-                      )}
+                      Login
                     </button>
 
                     <div>

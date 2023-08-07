@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import  Message  from '../../assets/image/svg/message-icon.svg';
+import Message from '../../assets/image/svg/message-icon.svg';
 import Dashboard from '../../assets/image/dropdashboard.png';
 import Logouts from '../../assets/image/power.png';
 import Favourites from '../../assets/image/Favourites.png';
@@ -16,31 +16,38 @@ import Notifications from '../../assets/image/svg/bell-icon.svg';
 import Dropimg from '../../assets/image/dropdown.png'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Logo from '../../assets/image/logo.png';
-import Iconsearch from '../../assets/image/fa_search.png' 
+import Iconsearch from '../../assets/image/fa_search.png'
 import { useNavigate } from 'react-router-dom';
 import { getData, storageKey } from '../../constants/storage';
+import profile from '../../assets/image/svg/profile.svg'
 import Login from '../login';
 import SignUp from '../sign-up';
-const Header = () =>{
+import { toast } from 'react-toastify';
+import * as url from '../../constants/urls'
+const Header = () => {
   const navigate = useNavigate();
   const [login, setLogin] = useState(false);
   const [signUp, setSignUp] = useState(false);
-  //  const [auth,setAuth] = useState()
-
-  //  useEffect(()=>{
-  //   getDetails()
-  //  },[auth])
-  //   const getDetails =()=>{
-  //      const data = getData(storageKey?.AUTH_TOKEN)
-  //      if (data){
-  //       setAuth(data)
-  //      }
-  //   }
+  const [name, setName] = useState("")
+  const [image, setImage] = useState("")
   const auth = getData(storageKey?.AUTH_TOKEN);
+
+  useEffect(() => {
+    const getUser = async () => {
+      const data = await getData(storageKey?.USER_DATA)
+
+      if (data) {
+        setImage(data?.user_img)
+      }
+    };
+    getUser();
+  }, []);
   const tokenClear = () => {
     localStorage.removeItem(storageKey?.AUTH_TOKEN);
+    toast.success("logout Successfully")
     navigate("/");
-  }; 
+  };
+
   return (
     <div>
       <Navbar expand="lg" className="w-100 bg-white fixed-top">
@@ -67,17 +74,6 @@ const Header = () =>{
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto align-items-center">
-              {/* <Form className="searchfrom search-from">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="seach-input"
-              aria-label="Search"
-            />
-               <div className='search-icon'>
-                  <img src= {Iconsearch } className='img-fluid' alt='Search'></img>
-               </div>
-          </Form> */}
               <Nav.Link href="#home" className="nav-item">
                 Book a Timeslot
               </Nav.Link>
@@ -118,7 +114,7 @@ const Header = () =>{
                       <NavDropdown
                         title={
                           <img
-                            src={Dropimg}
+                            src={image ? url?.BASE_URL + image : profile}
                             className="img-fluid"
                             alt="Message"
                           />

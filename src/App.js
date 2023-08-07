@@ -2,13 +2,11 @@ import './App.css';
 import AppRoutes from './Route';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import AOS from 'aos';
-// import 'aos/dist/aos.css'; 
-// AOS.init();
+import Loader from '../src/components/loader';
 function App() {
   return (
     <>
-    <ToastContainer
+      <ToastContainer
         position="top-right"
         autoClose={5000}
         hideProgressBar={false}
@@ -18,10 +16,12 @@ function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="dark"
+        theme="colored"
       />
-  <AppRoutes/>
-  </>
+      <Loader />
+      <AppRoutes />
+
+    </>
   );
 }
 

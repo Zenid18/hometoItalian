@@ -5,12 +5,6 @@ import Like from "../../assets/image/like.png";
 import Dropdown from "react-bootstrap/Dropdown";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
-import Gsingerashim from "../../assets/image/GingerHashim.png";
-import Gsingerashima from "../../assets/image/ga.png";
-import Gsingerashimb from "../../assets/image/print.png";
-import Gsingerashimc from "../../assets/image/gb.png";
-import Gsingerashimd from "../../assets/image/gd.png";
-import Gsingerashimes from "../../assets/image/ge.png";
 import Slidera from "../../assets/image/Slidera.png";
 import Sliderb from "../../assets/image/Sliderb.png";
 import Sliderc from "../../assets/image/Sliderc.png";
@@ -157,14 +151,12 @@ const Tutors = () => {
                           <p>{val.about}</p>
                           <div>
                             <h5>
-                              {" "}
                               <span className="Speaks">Speaks</span>
                               {val.lang}
                             </h5>
                             <h5>
-                              {" "}
-                              <span className="Speaks">{val.location}</span>
-                              5:29 AM (GMT-04:00)
+                              <span className="Speaks">Active since</span>
+                              05: 00 Pm
                             </h5>
                           </div>
                         </div>
