@@ -32,13 +32,13 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
   const auth = getData(storageKey?.AUTH_TOKEN);
-  const authLogin = ()=>{
+  const authLogin = () => {
 
     navigate("/tutors");
   }
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section>
       <Header />
@@ -91,7 +91,7 @@ const Home = () => {
               <div className="col-lg-8 col-md-10 col-11">
                 <div>
                   <h2 className="home-details" data-aos="fade-right">
-                    Why learn with <span>Verbling?</span>
+                    Why learn with <span>Home to Italian</span>
                   </h2>
                 </div>
               </div>
@@ -183,40 +183,38 @@ const Home = () => {
                     </h4>
                   </div>
                   <div className="Quando-details">
-                    <div className="program-section">
+                    <div className="program-section gap-5">
                       <div className="program-img set-a">
-                        <img src={Iqva} className="img-fluid" alt="IQV" />
+                        <img width={100} src={Iqva} className="img-fluid" alt="IQV" />
                       </div>
                       <div className="program-detail detail-a">
                         <p>
-                          A subscription program where you will find short video
-                          lessons with exercises.
+                          Start reconnecting to your Italian heritage with IQV's exclusive subscription program.
+                          Our great short video lessons with accompanying exercises offer a convenient way to integrate language learning into your daily routine.
                         </p>
                       </div>
                     </div>
 
-                    <div className="program-section">
+                    <div className="program-section gap-5">
                       <div className="program-img">
-                        <img src={Iqvb} className="img-fluid" alt="IQV" />
+                        <img width={120} src={Iqvb} className="img-fluid" alt="IQV" />
                       </div>
                       <div className="program-detail detail-b">
                         <p>
-                          It is perfect if you have little time to learn and
-                          practise but still want to see yourself get closer and
-                          closer every day to speaking and understanding Italian
-                          and Italy.
+                          Our concise and engaging video lessons ensure efficient learning and practice in all the language skills with a special attention to culture,
+                          enabling you to make daily progress. Whether you're on your lunch break or during a commute, IQV will fit into your busy schedule, with tangible and trackable progress.
                         </p>
                       </div>
                     </div>
 
-                    <div className="program-section section-set">
+                    <div className="program-section section-set gap-5">
                       <div className="program-img set-b">
-                        <img src={Iqvc} className="img-fluid" alt="IQV" />
+                        <img width={90} src={Iqvc} className="img-fluid" alt="IQV" />
                       </div>
                       <div className="program-detail detail-c">
                         <p>
-                          The content in IQV is updated and enriched every
-                          month!
+                          But that's not all! We're committed to keeping our content fresh and dynamic. Every month, IQV is updated and enriched with new lessons,
+                          ensuring you stay engaged and continuously expand your Italian proficiency.
                         </p>
                       </div>
                     </div>
@@ -272,10 +270,8 @@ const Home = () => {
                   </div>
                   <div className="Quando-details">
                     <p className="courses-detail">
-                      Our courses are designed and delivered by our native
-                      Italian teachers, with tests to assess your progress, the
-                      chance to meet your teacher during office hours to ask
-                      questions and a certificate of completion.
+                      Learn about the Italian culture and language with confidence and at your own pace through our courses led by native Italian teachers, that have designed
+                      them to cover different language levels and interests. Assess your progress with regular tests, connect with your teacher during office hours for personalized guidance, and earn a certificate of completion. Choose your first course today!
                     </p>
                     <div>
                       <Button
@@ -305,17 +301,13 @@ const Home = () => {
                       className="iqv-details margin-bttom "
                       data-aos="fade-left"
                     >
-                      it’s comfortable, we’re home!
+                      Come whenever you want, we’re home!
                     </h4>
                   </div>
                   <div className="Quando-details">
                     <p className="courses-detail">
-                      Whether you are studying by yourself with one of our
-                      courses and have a few questions, or you want to have a
-                      thorough discussion with a teacher about a topic, book a
-                      slot during our available office hours! You can decide to
-                      talk with your teacher for 15, 30 or 45 minutes. We can as
-                      well plan a cycle of 1:1 or group lessons together.
+                      Whether you are studying by yourself with one of our courses and have a few questions, or you want to have a thorough discussion with a
+                      teacher about a topic, book a slot during our available office hours! You can decide to talk with your teacher for 20, 30 or 45 minutes. We can as well plan a cycle of 1:1 or group lessons together.
                     </p>
                   </div>
                 </div>
@@ -373,9 +365,8 @@ const Home = () => {
                   </div>
                   <div className="Quando-details">
                     <p className="courses-detail">
-                      A library of materials that you can download to support
-                      your study. You will find PDF’s, cheat-sheets, e-books
-                      about everything Italian.
+                      A whole library of materials designed by our teachers with your learner’s profile in mind, that you can download to support your study.
+                      You will find PDF’s, cheat-sheets, e-books and more about everything Italian.
                     </p>
                   </div>
                 </div>
@@ -409,16 +400,15 @@ const Home = () => {
                   </div>
                   <div className="Quando-details">
                     <p className="courses-detail">
-                      Skilline has got more than 100k positive ratings from our
-                      users around the world.
+                      Read the testimonials from our students! Hear first hand how learning at Home to Italian has strengthened their connection to their Italian heritage
+                      and transformed their language skills.
+
+
                     </p>
                     <p className="courses-detail">
-                      Some of the students and teachers were greatly helped by
-                      the Skilline.
+                      Leave your testimonial here! We’d love to hear from you!
                     </p>
-                    <p className="courses-detail">
-                      Are you too? Please give your assessment
-                    </p>
+
                   </div>
                   <div className="view-btn">
                     <button
