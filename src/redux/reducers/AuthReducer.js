@@ -1,4 +1,10 @@
 import {
+  OTP_VERIFY_ERROR,
+  OTP_VERIFY_LOADING,
+  OTP_VERIFY_SUCCESS,
+  RESET_PASSWORD_ERROR,
+  RESET_PASSWORD_LOADING,
+  RESET_PASSWORD_SUCESS,
   USER_ACCOUNT_DETAILS_ERROR,
   USER_ACCOUNT_DETAILS_LOADING,
   USER_ACCOUNT_DETAILS_SUCCESS,
@@ -126,6 +132,44 @@ export const authReducer = (state = initialState, action) => {
         isLoading: action.isLoading,
       };
     case USER_LOGOUT_ERROR:
+      return {
+        ...state,
+        isLoading: action.isLoading,
+      };
+
+    case OTP_VERIFY_LOADING:
+      return {
+        ...state,
+        isLoading: action.isLoading,
+      };
+
+    case OTP_VERIFY_SUCCESS:
+      return {
+        ...state,
+        isLoading: action.isLoading,
+        data: action.data,
+      };
+
+    case OTP_VERIFY_ERROR:
+      return {
+        ...state,
+        isLoading: action.isLoading,
+      };
+
+    case RESET_PASSWORD_LOADING:
+      return {
+        ...state,
+        isLoading: action.isLoading,
+      };
+
+    case RESET_PASSWORD_SUCESS:
+      return {
+        ...state,
+        isLoading: action.isLoading,
+        data: action.data,
+      };
+
+    case RESET_PASSWORD_ERROR:
       return {
         ...state,
         isLoading: action.isLoading,

@@ -1,6 +1,12 @@
 import * as url from "../../constants/urls";
 import { storeData, getData, storageKey } from '../../constants/storage'
 import {
+  OtpVerifyError,
+  OtpVerifyLoading,
+  OtpVerifySucess,
+  resetPasswordError,
+  resetPasswordLoading,
+  resetPasswordSucess,
   userAccountDetailsError,
   userAccountDetailsLoading,
   userAccountDetailsSuccess,
@@ -22,10 +28,6 @@ import {
 
 } from "../actions/AuthActions";
 import * as Service from "../../constants/service";
-
-
-
-
 export const userLogin = (body) => async (dispatch) => {
   dispatch(userLoginLoading(true));
   try {
@@ -35,9 +37,9 @@ export const userLogin = (body) => async (dispatch) => {
     if (response.success == true || response?.status == 200) {
       dispatch(userLoginLoading(false));
       console.log(response, "LOGIN_API-----------");
-    }  
+    }
     if (response) {
-          dispatch(userLoginSuccess(false, response?.token));
+      dispatch(userLoginSuccess(false, response?.token));
       storeData(storageKey?.AUTH_TOKEN, response?.token);
       storeData(storageKey.USER_DATA, JSON.stringify(response.data));
     }
@@ -59,11 +61,11 @@ export const userSignUp = (body) => async (dispatch) => {
     if (response.success == true || response?.status == 200) {
       dispatch(userSignUpSuccess(false));
       console.log(response, "SIGN_UP_API-----------");
-     
+
     } else {
       dispatch(userSignUpSuccess(false));
     }
-     if (response) {
+    if (response) {
       storeData(storageKey?.AUTH_TOKEN, response?.token);
       storeData(storageKey.USER_DATA, JSON.stringify(response.data));
     }
@@ -132,6 +134,43 @@ export const handleLogoutUser = () => async (dispatch) => {
   } catch (error) {
     console.log("Logout error --", error);
     dispatch(userLogoutError(false));
+    return { message: error };
+  }
+};
+
+
+export const OtpVerify = (body) => async (dispatch) => {
+  dispatch(OtpVerifyLoading(true));
+  try {
+    const response = await Service.post(url.OTP_VERIFY, "", body);
+    if (response.success == true || response?.status == 200) {
+      dispatch(OtpVerifySucess(false));
+      console.log(response, "LOGIN_API-----------");
+
+    }
+
+    return response;
+  } catch (error) {
+    // console.log(error, 'err-----------');
+    dispatch(OtpVerifyError(false));
+    return { message: error };
+  }
+};
+
+export const resetPassword = (body) => async (dispatch) => {
+  dispatch(resetPasswordLoading(true));
+  try {
+    const response = await Service.post(url.RESET_PASSWORD, "", body);
+    if (response.success == true || response?.status == 200) {
+      dispatch(resetPasswordSucess(false));
+      console.log(response, "LOGIN_API-----------");
+
+    }
+
+    return response;
+  } catch (error) {
+    // console.log(error, 'err-----------');
+    dispatch(resetPasswordError(false));
     return { message: error };
   }
 };

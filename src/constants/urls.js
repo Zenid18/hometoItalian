@@ -6,6 +6,9 @@ export const ACCOUNT_DETAILS = "/admin_detail";
 export const ACCOUNT_UPDATE = "/admin_update_profile";
 export const UPLOAD_IMAGE = "/admin_upload_image";
 export const LOGOUT_USER = "/logout_admin";
+export const OTP_VERIFY = "/index/verify_otp_user";
+export const RESET_PASSWORD = "/index/reset_instructor_password"
+
 
 // students
 export const GET_STUDENTS = "/user_list"

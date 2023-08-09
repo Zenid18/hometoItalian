@@ -1,0 +1,48 @@
+.send-btn button {
+    color: #008c45;
+}
+
+.otp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.otp-input-wrapper {
+
+    margin-bottom: 16px;
+}
+
+.otp-box input {
+    width: 50px !important;
+    height: 50px !important;
+    background: #5954542e;
+    border: 0;
+    border-radius: 3px;
+    border: 1px solid #fff;
+}
+
+.otp-box input:focus {
+    border: 2px solid #d30000 !important;
+    color: var(--d-pink);
+    background: #fff;
+}
+
+.otp-box span {
+    visibility: hidden;
+    padding: 0 8px;
+}
+
+.time-detail {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.otp-box input:focus-visible {
+    border: 2px solid #d30000 !important;
+    color: var(--d-pink);
+    background: #fff;
+    outline: 2px;
+}

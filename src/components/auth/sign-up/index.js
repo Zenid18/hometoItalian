@@ -1,24 +1,24 @@
 // import Popimg from '../../assets/images/pop-img.png';
 import React, { useState } from "react";
 import './style.css';
-import '../../App.css';
-import Loginimg from "../../assets/image/loginlogo.png";
-import Google from '../../assets/image/google.png';
-import Facebook from '../../assets/image/facebook.png';
+import '../../../App.css';
+import Loginimg from "../../../assets/image/loginlogo.png";
+import Google from '../../../assets/image/google.png';
+import Facebook from '../../../assets/image/facebook.png';
 import * as Yup from "yup";
-import { useFormik } from "formik"; 
+import { useFormik } from "formik";
 import { useDispatch } from "react-redux";
-import { userSignUp } from "../../redux/services/AuthService";
+import { userSignUp } from "../../../redux/services/AuthService";
 import { toast } from "react-toastify";
 const SignUp = (props) => {
   const dispatch = useDispatch()
   const [show, setShow] = useState(true)
-  const [confirmShow, setConfirmShow] = useState(true) 
-  const moveToLogin = ()=>{
+  const [confirmShow, setConfirmShow] = useState(true)
+  const moveToLogin = () => {
     props?.setSignUp(false)
     props?.setLogin(true)
   }
-  const formik = useFormik({ 
+  const formik = useFormik({
     initialValues: {
       fname: "",
       lname: "",
@@ -45,12 +45,12 @@ const SignUp = (props) => {
       }
       const res = await dispatch(userSignUp(body))
       if (res?.status == 200 || res?.success == true) {
-    
+
         props?.setSignUp(false)
-          toast.success(res?.message);
+        toast.success(res?.message);
       }
       else {
-       toast.error(res?.message);
+        toast.error(res?.message);
       }
     }
   });
@@ -63,7 +63,7 @@ const SignUp = (props) => {
   }
   return (
     <>
-     
+
       <div className="popup-overlay py-2">
         <div className="popup-content  setcontent-height">
           <div className="popup-logo pb-3">
@@ -108,11 +108,10 @@ const SignUp = (props) => {
                       value={formik.values.fname}
                       onBlur={formik.handleBlur}
                       onChange={formik.handleChange}
-                      className={`w-100 py-2 ps-4 rounded-pill transition ${
-                        formik.touched.fname && formik.errors.fname
-                          ? "error-border"
-                          : ""
-                      }`}
+                      className={`w-100 py-2 ps-4 rounded-pill transition ${formik.touched.fname && formik.errors.fname
+                        ? "error-border"
+                        : ""
+                        }`}
                     />
                     <span className="pass-btn pass-btn rounded-pill pe-3 d-flex align-items-center">
                       <i class="fa-solid fa-user"></i>
@@ -146,11 +145,10 @@ const SignUp = (props) => {
                       value={formik.values.lname}
                       onBlur={formik.handleBlur}
                       onChange={formik.handleChange}
-                      className={`w-100 py-2 ps-4 rounded-pill transition ${
-                        formik.touched.lname && formik.errors.lname
-                          ? "error-border"
-                          : ""
-                      }`}
+                      className={`w-100 py-2 ps-4 rounded-pill transition ${formik.touched.lname && formik.errors.lname
+                        ? "error-border"
+                        : ""
+                        }`}
                     />
                     <span className="pass-btn pass-btn rounded-pill pe-3 d-flex align-items-center">
                       <i class="fa-solid fa-user"></i>
@@ -184,11 +182,10 @@ const SignUp = (props) => {
                       value={formik.values.email}
                       onBlur={formik.handleBlur}
                       onChange={formik.handleChange}
-                      className={`w-100 py-2 ps-4 rounded-pill transition ${
-                        formik.touched.email && formik.errors.email
-                          ? "error-border"
-                          : ""
-                      }`}
+                      className={`w-100 py-2 ps-4 rounded-pill transition ${formik.touched.email && formik.errors.email
+                        ? "error-border"
+                        : ""
+                        }`}
                     />
                     <span className="pass-btn pass-btn rounded-pill pe-3 d-flex align-items-center">
                       <i class="fa-solid fa-envelope"></i>
@@ -232,11 +229,10 @@ const SignUp = (props) => {
                       value={formik.values.password}
                       onBlur={formik.handleBlur}
                       onChange={formik.handleChange}
-                      className={`w-100 py-2 ps-4 rounded-pill transition ${
-                        formik.touched.password && formik.errors.password
-                          ? "error-border"
-                          : ""
-                      }`}
+                      className={`w-100 py-2 ps-4 rounded-pill transition ${formik.touched.password && formik.errors.password
+                        ? "error-border"
+                        : ""
+                        }`}
                     />
                     <span className="pass-btn pass-btn rounded-pill pe-3 d-flex align-items-center">
                       {show ? (
@@ -290,11 +286,10 @@ const SignUp = (props) => {
                       value={formik.values.confirmPass}
                       onBlur={formik.handleBlur}
                       onChange={formik.handleChange}
-                      className={`w-100 py-2 ps-4 rounded-pill transition ${
-                        formik.touched.confirmPass && formik.errors.confirmPass
-                          ? "error-border"
-                          : ""
-                      }`}
+                      className={`w-100 py-2 ps-4 rounded-pill transition ${formik.touched.confirmPass && formik.errors.confirmPass
+                        ? "error-border"
+                        : ""
+                        }`}
                     />
                     <span className="pass-btn pass-btn rounded-pill pe-3 d-flex align-items-center">
                       {confirmShow ? (

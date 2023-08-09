@@ -1,4 +1,10 @@
 import {
+  OTP_VERIFY_ERROR,
+  OTP_VERIFY_LOADING,
+  OTP_VERIFY_SUCCESS,
+  RESET_PASSWORD_ERROR,
+  RESET_PASSWORD_LOADING,
+  RESET_PASSWORD_SUCESS,
   USER_ACCOUNT_DETAILS_ERROR,
   USER_ACCOUNT_DETAILS_LOADING,
   USER_ACCOUNT_DETAILS_SUCCESS,
@@ -117,3 +123,44 @@ export const userLogoutError = (isLoading) => ({
   isLoading: isLoading,
 });
 
+
+export const OtpVerifyLoading = (isLoading) => {
+  return {
+    type: OTP_VERIFY_LOADING,
+    isLoading: isLoading,
+  };
+}
+export const OtpVerifySucess = (isLoading, data) => {
+  return {
+    type: OTP_VERIFY_SUCCESS,
+    isLoading: isLoading,
+    data: data,
+  };
+};
+export const OtpVerifyError = (isLoading) => {
+  return {
+    type: OTP_VERIFY_ERROR,
+    isLoading: isLoading,
+  };
+}
+
+
+export const resetPasswordLoading = (isLoading) => {
+  return {
+    type: RESET_PASSWORD_LOADING,
+    isLoading: isLoading,
+  };
+}
+export const resetPasswordSucess = (isLoading, data) => {
+  return {
+    type: RESET_PASSWORD_SUCESS,
+    isLoading: isLoading,
+    data: data,
+  };
+};
+export const resetPasswordError = (isLoading) => {
+  return {
+    type: RESET_PASSWORD_ERROR,
+    isLoading: isLoading,
+  };
+}

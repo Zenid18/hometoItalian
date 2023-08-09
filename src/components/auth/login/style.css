@@ -141,7 +141,8 @@ a.account-detail {
   color: var(--grey) !important;
 }
 
-.input-box input:focus, .input-box input:focus-visible {
+.input-box input:focus,
+.input-box input:focus-visible {
   border: 1px solid var(--red) !important;
   background-color: var(--l-pink);
   outline: unset;
@@ -158,9 +159,19 @@ a.account-detail {
   right: 10px;
   height: 40px;
 }
-.transition{
+
+.transition {
   transition: all 0.3s ease;
 }
-.error-border{
+
+.error-border {
   border: 1px solid var(--red) !important;
+}
+
+button.forget-detail {
+  color: #2F327D;
+  font-size: 15px;
+  text-decoration: none;
+  border: unset;
+  background: unset;
 }

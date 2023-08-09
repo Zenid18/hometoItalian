@@ -1,22 +1,23 @@
 // import Popimg from '../../assets/images/pop-img.png';
 import React, { useState } from "react";
 import "./style.css";
-import "../../App.css";
-import Loginimg from "../../assets/image/loginlogo.png";
-import Google from "../../assets/image/google.png";
-import Facebook from "../../assets/image/facebook.png";
+import "../../../App.css";
+import Loginimg from "../../../assets/image/loginlogo.png";
+import Google from "../../../assets/image/google.png";
+import Facebook from "../../../assets/image/facebook.png";
+import Forgot from "../../../components/footer/index";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
-import { userLogin } from "../../redux/services/AuthService";
+import { userLogin } from "../../../redux/services/AuthService";
 import { toast } from "react-toastify";
-const Login = (props) => {
+const Login = ({ setLogin, login, setSignUp, setForgot }) => {
   const dispatch = useDispatch();
   const [show, setShow] = useState(true);
   const [showPassLogin, setShowPassLogin] = useState(false);
   const moveToSignUp = () => {
-    props?.setLogin(false);
-    props?.setSignUp(true);
+    setLogin(false);
+    setSignUp(true);
   };
   const formik = useFormik({
     initialValues: {
@@ -40,7 +41,7 @@ const Login = (props) => {
       const res = await dispatch(userLogin(body));
       if (res?.status == 200 || res?.success == true) {
         toast.success(res?.message)
-        props?.setLogin(false);
+        setLogin(false);
       } else {
         toast.error(res?.message);
       }
@@ -49,6 +50,11 @@ const Login = (props) => {
   const showPassword = () => {
     setShow(!show);
   };
+
+  const handleShow = () => {
+    setLogin(false);
+    setForgot(true)
+  }
   return (
     <>
       <div className="popup-overlay">
@@ -59,7 +65,7 @@ const Login = (props) => {
             </div>
             <div>
               <button
-                onClick={() => props?.setLogin(false)}
+                onClick={() => setLogin(false)}
                 className="close-popup"
               >
                 {" "}
@@ -180,9 +186,9 @@ const Login = (props) => {
 
                     <div>
                       <p className="forget">
-                        <a href="#" className="forget-detail">
+                        <button className="forget-detail" onClick={() => handleShow()} >
                           Forgot Password
-                        </a>
+                        </button>
                       </p>
                     </div>
                   </div>

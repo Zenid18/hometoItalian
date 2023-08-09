@@ -20,14 +20,23 @@ import Iconsearch from '../../assets/image/fa_search.png'
 import { useNavigate } from 'react-router-dom';
 import { getData, storageKey } from '../../constants/storage';
 import profile from '../../assets/image/svg/profile.svg'
-import Login from '../login';
-import SignUp from '../sign-up';
 import { toast } from 'react-toastify';
 import * as url from '../../constants/urls'
+import Forgot from '../auth/forgot';
+import Otp from '../auth/otp';
+import Verify from '../auth/verify';
+import Login from '../auth/login';
+import SignUp from '../auth/sign-up';
+import ResetPassword from '../auth/resetpassword';
+
 const Header = () => {
   const navigate = useNavigate();
   const [login, setLogin] = useState(false);
   const [signUp, setSignUp] = useState(false);
+  const [forgot, setForgot] = useState(false);
+  const [otp, setOtp] = useState(false);
+  const [verify, setVerify] = useState(false);
+  const [reset, setReset] = useState(false)
   const [name, setName] = useState("")
   const [image, setImage] = useState("")
   const auth = getData(storageKey?.AUTH_TOKEN);
@@ -162,16 +171,13 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      {login ? (
-        <Login login={login} setLogin={setLogin} setSignUp={setSignUp} />
-      ) : (
-        ""
-      )}
-      {signUp ? (
-        <SignUp signUp={signUp} setSignUp={setSignUp} setLogin={setLogin} />
-      ) : (
-        ""
-      )}
+      {login ? <Login setLogin={setLogin} setSignUp={setSignUp} setForgot={setForgot} /> : ""}
+      {signUp ? <SignUp setSignUp={setSignUp} setLogin={setLogin} /> : ""}
+      {forgot ? <Forgot setForgot={setForgot} setOtp={setOtp} /> : ""}
+      {otp ? <Otp otp={otp} setOtp={setOtp} verify={verify} setVerify={setVerify} /> : ""}
+      {verify ? <Verify setVerify={setVerify} setReset={setReset} /> : ""}
+      {reset ? <ResetPassword setReset={setReset} setLogin={setLogin} /> : ""}
+
     </div>
   );
 };
