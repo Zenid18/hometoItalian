@@ -25,12 +25,15 @@ body {
 
 :root {
   --bg-color: #fff;
+  --white: #fff;
   --black: #000;
   --d-grey: #787A8D;
   --l-pink: #fff3f9;
   --red: #D30000;
+    --blue: #2F327D;
   --l-grey: #F6F6F6;
   --grey: #C9C9C9;
+    --l-pink: #fff3f9;
   --theme-color: #FF1616;
   --text-green: #159800;
   --dark-text: #000000;
@@ -38,13 +41,22 @@ body {
   --grid-color: linear-gradient(to right, #f55454, #f24f4a, #ee4a40, #ea4636, #e5422b);
   --form-bg: #F6F6F6;
   --iqa-color: #D30000;
+  --red-linear: linear-gradient(90deg, #f55454, #f24f4a, #ee4a40, #ea4636, #e5422b);
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+.white-text {
+  color: var(--white) !important;
+  fill: var(--white) !important;
+}
 
+.black-text {
+  color: var(--black) !important;
+  fill: var(--black) !important;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

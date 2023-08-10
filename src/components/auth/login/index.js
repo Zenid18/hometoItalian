@@ -174,7 +174,7 @@ const Login = ({ setLogin, login, setSignUp, setForgot }) => {
                     )}
                   </div>
 
-                  <div className="button-section">
+                  <div className="button-section m-0">
                     <button
                       disabled={formik.isSubmitting}
                       type="submit"

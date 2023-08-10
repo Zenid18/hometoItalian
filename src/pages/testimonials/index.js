@@ -241,16 +241,6 @@ const Testimontial = () => {
               </div>
             </div>
           </section>
-
-          <section className="loader-section text-margin ">
-            <div className="row align-items-center justify-content-center">
-              <div className="col-lg-6">
-                <div>
-                  <p className="loader-detail">loader</p>
-                </div>
-              </div>
-            </div>
-          </section>
           <section className="text-margin">
             <div className="row align-item-center justify-content-center">
               <div className="col-lg-10">

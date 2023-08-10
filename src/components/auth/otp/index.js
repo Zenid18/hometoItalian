@@ -20,7 +20,7 @@ const Otp = ({ setOtp, setVerify }) => {
                 <div className="row align-items-center justify-content-center">
                     <div className="col-lg-12 text-center">
                         <div>
-                            <h2 class="fw-600 text-center pb-2">OTP Verification</h2>
+                            <h2 class="fw-600 text-center">OTP Verification</h2>
                             <p className="email-detail">
                                 Type the email verification code we’ve sent you
                             </p>
@@ -28,7 +28,7 @@ const Otp = ({ setOtp, setVerify }) => {
                     </div>
                     <div className="col-lg-12">
                         <div className="text-center">
-                            <p class="fw-600 text-center py-2 time-detail">00:00</p>
+                            <p class="fw-600 text-center time-detail">00:00</p>
 
                         </div>
                         <div className="text-center">
@@ -39,7 +39,7 @@ const Otp = ({ setOtp, setVerify }) => {
                                         value={otp1}
                                         onChange={setOtp1}
                                         numInputs={4}
-                                        containerStyle="justify-content-center otp-box pb-3"
+                                        containerStyle="justify-content-center otp-box"
                                         inputType="tel"
                                         shouldAutoFocus
                                         renderSeparator={<span>-</span>}
@@ -52,20 +52,20 @@ const Otp = ({ setOtp, setVerify }) => {
                         </div>
 
                     </div>
-                    <div className="pt-4">
+                    <div className="">
                         <div className="col-lg-12 text-center">
                             <button type="submit" onClick={() => handleShow()} class="loginbtn form-control d-flex align-items-center justify-content-center shadow-none"> verify</button>
 
                         </div>
                     </div>
-                    <div className="col-lg-12 text-center pt-2 pt-md-3 pt-lg-2">
+                    <div className="col-lg-12 text-center">
                         <div className="text-center">
                             <p class="text-center my-3 text-body-tertiary">or</p>
                         </div>
                     </div>
                     <div className="col-lg-12 text-center">
                         <div>
-                            <div class="send-btn text-center"><button class="border-0 bg-transparent fw-600 pb-2">Send again</button></div>
+                            <div class="send-btn text-center"><button class="border-0 bg-transparent fw-600 ">Send again</button></div>
                         </div>
 
                     </div>
