@@ -438,7 +438,7 @@ const Home = () => {
                             <p>Gloria Rose</p>
                           </li>
                           <li>
-                            <p>12 reviews at Yelp </p>
+                            {/* <p>12 reviews at Yelp </p> */}
                           </li>
                         </ul>
                       </div>
