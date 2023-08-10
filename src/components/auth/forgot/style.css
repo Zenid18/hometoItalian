@@ -1,0 +1,41 @@
+
+
+.login-inner h2 {
+    font-size: 20px;
+}
+
+.login-inner .input-box input {
+    border: 1px solid transparent;
+    background: var(--l-grey);
+    font-size: 15px;
+}
+
+.login-inner .input-box input::placeholder {
+    color: var(--grey);
+}
+
+.login-inner .input-box input:focus {
+    border: 1px solid var(--red) !important;
+    background-color: var(--l-pink);
+}
+
+.login-inner .input-box input:focus::placeholder {
+    color: var(--black);
+}
+
+.login-inner .input-box .pass-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+}
+
+.login-inner .login-btn {
+    background: var(--red-linear);
+    padding: 10px 0;
+}
+
+.login-inner .forgot-pass a {
+    font-size: 12px;
+    color: var(--blue);
+}

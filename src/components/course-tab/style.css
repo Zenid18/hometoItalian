@@ -2,52 +2,68 @@
 .heart-circle-img {
     top: 0;
 }
-.course-tab-img{
+
+.course-tab-img {
     position: relative;
 
 }
-.course-inner-img{
+
+.course-inner-img {
     min-width: 100%;
 }
-.course-icon-img{
+
+.course-icon-img {
     position: absolute;
     top: 0;
 }
-.course-heading-price h3{
+
+.course-heading-price h3 {
     font-size: 19px;
     font-weight: 700;
 }
-.course-heading-price p{
+
+.course-heading-price p {
     font-size: 20px;
     font-weight: 700;
     color: var(--text-green);
 }
-.course-tab-para{
+
+.course-tab-para {
     font-size: 14px;
     font-weight: 500;
 }
-.course-profile-data span{
+
+.course-profile-data span {
     font-size: 18px;
     font-weight: 600;
 }
-.course-buy-btn{
+
+.course-buy-btn {
     color: var(--bg-color);
     background: var(--grid-color);
 }
-.course-tab-box{
+
+.course-tab-box {
     box-shadow: 0px 18.829999923706055px 47.08000183105469px 0px rgba(47, 50, 125, 0.10);
 
 }
 
 
-.more-course button{
+.more-course button {
     border: 1px solid var(--iqa-color);
     background: var(--bg-color);
     width: 200px;
     font-weight: 600;
     transition: all 0.3s ease;
 }
-.more-course button:hover{
-    color:var(--bg-color);
+
+.more-course button:hover {
+    color: var(--bg-color);
     background: var(--grid-color);
+}
+
+.course-profile-img {
+    height: 35px;
+    width: 35px;
+
 }

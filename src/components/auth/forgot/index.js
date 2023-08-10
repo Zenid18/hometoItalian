@@ -33,6 +33,11 @@ const Forgot = ({ setForgot, setOtp, setEmail, }) => {
                 toast.error(res?.message);
             }
             formik.setSubmitting(false);
+            // navigate('/otp', { state: formik?.values?.email });
+            // } else {
+            //     toast.error(res?.message);
+            // }
+            // formik.setSubmitting(false);
         },
     });
     const showOtp = () => {
@@ -44,7 +49,7 @@ const Forgot = ({ setForgot, setOtp, setEmail, }) => {
             <div className="popup-overlay">
                 <div className="popup-content">
                     <div className="popup-logo pb-3">
-                        <div>
+                        <div className="text-center">
                             <img src={Loginimg} className="img-fluid" alt="logo"></img>
                         </div>
                         <div>

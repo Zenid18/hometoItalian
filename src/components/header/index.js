@@ -177,7 +177,7 @@ const Header = () => {
       {forgot ? <Forgot setForgot={setForgot} setOtp={setOtp} setEmail={setEmail} /> : ""}
       {otp ? <Otp otp={otp} setOtp={setOtp} verify={verify} setVerify={setVerify} email={email} setEmail={setEmail} /> : ""}
       {verify ? <Verify setVerify={setVerify} setReset={setReset} /> : ""}
-      {reset ? <ResetPassword setReset={setReset} setLogin={setLogin} /> : ""}
+      {reset ? <ResetPassword setReset={setReset} setLogin={setLogin} email={email} setEmail={setEmail} /> : ""}
 
     </div>
   );
