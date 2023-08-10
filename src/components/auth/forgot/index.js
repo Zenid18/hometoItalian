@@ -78,7 +78,7 @@ const Forgot = ({ setForgot, setOtp }) => {
                                                     </path></svg></span>
                                         </div>
                                     </div>
-                                    <button type="submit" class="loginbtn form-control d-flex align-items-center justify-content-center shadow-none">Send OTP</button>
+                                    <button disabled={formik.isSubmitting} type="submit" class="loginbtn form-control d-flex align-items-center justify-content-center shadow-none">Send OTP</button>
 
                                 </form>
                             </div>
