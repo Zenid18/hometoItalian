@@ -86,7 +86,7 @@ const Home = () => {
           </div>
           {/*home-section */}
 
-          <section className="home-margin">
+          {/* <section className="home-margin">
             <div className="row align-items-center justify-content-center">
               <div className="col-lg-8 col-md-10 col-11">
                 <div>
@@ -159,7 +159,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
 
           <section className="find-margin">
             <div className="row  justify-content-center">

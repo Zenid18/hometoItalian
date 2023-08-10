@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import { forgotPassword } from "../../../redux/services/AuthService";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-const Forgot = ({ setForgot, setOtp }) => {
+const Forgot = ({ setForgot, setOtp, setEmail, }) => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const formik = useFormik({
@@ -27,7 +27,8 @@ const Forgot = ({ setForgot, setOtp }) => {
                 toast.success(res?.message);
                 setForgot(false)
                 setOtp(true)
-                // navigate('/otp', { state: formik?.values?.email });
+                setEmail(formik?.values?.email)
+
             } else {
                 toast.error(res?.message);
             }
@@ -76,6 +77,11 @@ const Forgot = ({ setForgot, setOtp }) => {
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="15" viewBox="0 0 25 21" fill="var(--d-grey)">
                                                     <path d="M22.5 20.5791H2.5C1.83696 20.5791 1.20107 20.3157 0.732233 19.8469C0.263392 19.378 0 18.7421 0 18.0791V2.97035C0.0280408 2.32634 0.303761 1.71805 0.769598 1.27248C1.23543 0.826905 1.85538 0.578493 2.5 0.579103H22.5C23.163 0.579103 23.7989 0.842495 24.2678 1.31134C24.7366 1.78018 25 2.41606 25 3.0791V18.0791C25 18.7421 24.7366 19.378 24.2678 19.8469C23.7989 20.3157 23.163 20.5791 22.5 20.5791ZM2.5 5.4141V18.0791H22.5V5.4141L12.5 12.0791L2.5 5.4141ZM3.5 3.0791L12.5 9.0791L21.5 3.0791H3.5Z">
                                                     </path></svg></span>
+                                            {formik.touched.email && formik.errors.email && (
+                                                <span className="text-danger fs-6">
+                                                    {formik.errors.email}
+                                                </span>
+                                            )}
                                         </div>
                                     </div>
                                     <button disabled={formik.isSubmitting} type="submit" class="loginbtn form-control d-flex align-items-center justify-content-center shadow-none">Send OTP</button>

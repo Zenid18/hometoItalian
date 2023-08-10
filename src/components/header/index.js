@@ -39,6 +39,7 @@ const Header = () => {
   const [reset, setReset] = useState(false)
   const [name, setName] = useState("")
   const [image, setImage] = useState("")
+  const [email, setEmail] = useState("")
   const auth = getData(storageKey?.AUTH_TOKEN);
 
   useEffect(() => {
@@ -173,8 +174,8 @@ const Header = () => {
       </Navbar>
       {login ? <Login setLogin={setLogin} setSignUp={setSignUp} setForgot={setForgot} /> : ""}
       {signUp ? <SignUp setSignUp={setSignUp} setLogin={setLogin} /> : ""}
-      {forgot ? <Forgot setForgot={setForgot} setOtp={setOtp} /> : ""}
-      {otp ? <Otp otp={otp} setOtp={setOtp} verify={verify} setVerify={setVerify} /> : ""}
+      {forgot ? <Forgot setForgot={setForgot} setOtp={setOtp} setEmail={setEmail} /> : ""}
+      {otp ? <Otp otp={otp} setOtp={setOtp} verify={verify} setVerify={setVerify} email={email} setEmail={setEmail} /> : ""}
       {verify ? <Verify setVerify={setVerify} setReset={setReset} /> : ""}
       {reset ? <ResetPassword setReset={setReset} setLogin={setLogin} /> : ""}
 

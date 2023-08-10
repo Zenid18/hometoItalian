@@ -81,11 +81,15 @@ export const forgotPassword = (body) => async (dispatch) => {
   dispatch(userForgotPassLoading(true));
   try {
     const response = await Service.post(url.FORGOTPASS_API, "", body);
-    console.log("forgotPass response--", response);
-    dispatch(userForgotPassSuccess(false));
+    if (response.success == true || response?.status == 200) {
+      dispatch(userForgotPassSuccess(false));
+      console.log(response, "SIGN_UP_API-----------");
+
+    } else {
+      dispatch(userForgotPassSuccess(false));
+    }
     return response;
   } catch (error) {
-    // console.log("forgotPassword response--", response);
     dispatch(userForgotPassError(false));
     return { message: error };
   }
@@ -145,10 +149,11 @@ export const OtpVerify = (body) => async (dispatch) => {
     const response = await Service.post(url.OTP_VERIFY, "", body);
     if (response.success == true || response?.status == 200) {
       dispatch(OtpVerifySucess(false));
-      console.log(response, "LOGIN_API-----------");
+      console.log(response, "SIGN_UP_API-----------");
 
+    } else {
+      dispatch(OtpVerifySucess(false));
     }
-
     return response;
   } catch (error) {
     // console.log(error, 'err-----------');
