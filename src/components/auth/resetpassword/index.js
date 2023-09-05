@@ -27,6 +27,8 @@ const ResetPassword = ({ setReset, setLogin, email, setemail }) => {
         .required('Confirm Password is required'),
     }),
     onSubmit: async () => {
+      setReset(false);
+      setLogin(true);
       const body = {
         new_password: formik?.values?.newPassword,
         confirm_password: formik?.values?.comPassword,
@@ -34,13 +36,13 @@ const ResetPassword = ({ setReset, setLogin, email, setemail }) => {
       };
       console.log(body);
       const res = await dispatch(resetPassword(body));
-      if (res?.status == 200 || res?.success == true) {
-        toast.success(res?.message);
-        setReset(false);
-        setLogin(true);
-      } else {
-        toast.error(res?.message);
-      }
+      // if (res?.status == 200 || res?.success == true) {
+      //   toast.success(res?.message);
+      //   setReset(false);
+      //   setLogin(true);
+      // } else {
+      //   toast.error(res?.message);
+      // }
       formik.setSubmitting(false);
     },
   });

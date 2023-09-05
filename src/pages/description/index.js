@@ -25,11 +25,11 @@ const Description = () => {
     const body = {
       teacher_id: data
     };
-    const res = await dispatch(getTutorDetail(body));
-    if (res?.status == 200 || res?.success == true) {
-      setTutor(res.data) 
-    } else {
-    }
+    // const res = await dispatch(getTutorDetail(body));
+    // if (res?.status == 200 || res?.success == true) {
+    //   setTutor(res.data) 
+    // } else {
+    // }
   };
   console.log(tutor, "lll");
   return (

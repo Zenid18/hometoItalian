@@ -15,10 +15,10 @@ const CoursesTab = () => {
     handleCourses()
   }, [])
   const handleCourses = async () => {
-    const res = await dispatch(getCourseList())
-    if (res?.status == 200 || res?.sucess == true) {
-      setCourseData(res?.data)
-    }
+    // const res = await dispatch(getCourseList())
+    // if (res?.status == 200 || res?.sucess == true) {
+    //   setCourseData(res?.data)
+    // }
   }
 
   return (

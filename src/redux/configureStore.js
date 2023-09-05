@@ -1,7 +1,7 @@
-import { applyMiddleware, combineReducers } from "redux";
+import { combineReducers } from "redux";
 import { configureStore } from "@reduxjs/toolkit";
 import thunk from "redux-thunk";
-import { authReducer } from "./reducers/AuthReducer"; 
+import { authReducer } from "./reducers/AuthReducer";
 import { otherReducer } from "./reducers/OtherReducer";
 
 const reducer = combineReducers({
@@ -11,6 +11,6 @@ const reducer = combineReducers({
 
 export const store = configureStore({ reducer: reducer, middleware: [thunk] });
 
- 
 
- 
+
+

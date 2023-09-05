@@ -33,18 +33,19 @@ const Login = ({ setLogin, login, setSignUp, setForgot }) => {
         .min(8, "Password must be at least 8 characters"),
     }),
     onSubmit: async () => {
+      setLogin(false)
       const body = {
         email_id: formik?.values?.email,
         password: formik?.values?.password,
       };
 
-      const res = await dispatch(userLogin(body));
-      if (res?.status == 200 || res?.success == true) {
-        toast.success(res?.message)
-        setLogin(false);
-      } else {
-        toast.error(res?.message);
-      }
+      // const res = await dispatch(userLogin(body));
+      // if (res?.status == 200 || res?.success == true) {
+      //   toast.success(res?.message)
+      //   setLogin(false);
+      // } else {
+      //   toast.error(res?.message);
+      // }
     },
   });
   const showPassword = () => {

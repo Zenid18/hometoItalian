@@ -3,7 +3,6 @@ import { getData, storageKey } from '../../constants/storage';
 import { useNavigate } from 'react-router-dom';
 
 const Protected = (props) => {
-    const [showLogin, setShowLogin] = useState(false)
     const navigate = useNavigate()
     let Cmp = props?.Cmp
     useEffect(() => {

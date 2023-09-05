@@ -36,6 +36,7 @@ const SignUp = (props) => {
         .required('Confirm Password is required'),
     }),
     onSubmit: async () => {
+      props?.setSignUp(false)
       const body = {
         first_name: formik?.values?.fname,
         last_name: formik?.values?.lname,
@@ -43,15 +44,15 @@ const SignUp = (props) => {
         password: formik?.values?.password,
         confirm_password: formik?.values?.confirmPass
       }
-      const res = await dispatch(userSignUp(body))
-      if (res?.status == 200 || res?.success == true) {
+      // const res = await dispatch(userSignUp(body))
+      // if (res?.status == 200 || res?.success == true) {
 
-        props?.setSignUp(false)
-        toast.success(res?.message);
-      }
-      else {
-        toast.error(res?.message);
-      }
+      //   props?.setSignUp(false)
+      //   toast.success(res?.message);
+      // }
+      // else {
+      //   toast.error(res?.message);
+      // }
     }
   });
 

@@ -18,21 +18,24 @@ const Forgot = ({ setForgot, setOtp, setEmail, }) => {
             email: Yup.string().email().required("Email is required"),
         }),
         onSubmit: async () => {
+
+            setForgot(false)
+            setOtp(true)
             const body = {
                 email_id: formik?.values?.email,
             };
             console.log(body);
             const res = await dispatch(forgotPassword(body));
-            if (res?.status == 200 || res?.success == true) {
-                toast.success(res?.message);
-                setForgot(false)
-                setOtp(true)
-                setEmail(formik?.values?.email)
+            // if (res?.status == 200 || res?.success == true) {
+            //     toast.success(res?.message);
+            //     setForgot(false)
+            //     setOtp(true)
+            //     setEmail(formik?.values?.email)
 
-            } else {
-                toast.error(res?.message);
-            }
-            formik.setSubmitting(false);
+            // } else {
+            //     toast.error(res?.message);
+            // }
+            // formik.setSubmitting(false);
             // navigate('/otp', { state: formik?.values?.email });
             // } else {
             //     toast.error(res?.message);

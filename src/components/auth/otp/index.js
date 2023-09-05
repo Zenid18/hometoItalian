@@ -43,25 +43,27 @@ const Otp = ({ setOtp, setVerify, email, setEmail }) => {
 
     const handleOtp = async (event) => {
         event?.preventDefault()
-        if (!otp1) {
-            toast?.error("Otp is required")
-        }
-        else {
-            const body = {
-                email_id: email,
-                otp: otp1
-            }
-            const res = await dispatch(OtpVerify(body));
-            console.log(res, '????')
-            if (res?.status == 200 || res?.success == true) {
-                toast.success(res?.message);
-                setOtp(false)
-                setVerify(true)
-                setEmail(email)
-            } else {
-                toast.error(res?.message);
-            }
-        }
+        setOtp(false)
+        setVerify(true)
+        // if (!otp1) {
+        //     toast?.error("Otp is required")
+        // }
+        // else {
+        //     const body = {
+        //         email_id: email,
+        //         otp: otp1
+        //     }
+        //     const res = await dispatch(OtpVerify(body));
+        //     console.log(res, '????')
+        //     if (res?.status == 200 || res?.success == true) {
+        //         toast.success(res?.message);
+        //         setOtp(false)
+        //         setVerify(true)
+        //         setEmail(email)
+        //     } else {
+        //         toast.error(res?.message);
+        //     }
+        // }
 
     }
 

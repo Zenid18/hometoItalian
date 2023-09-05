@@ -29,17 +29,21 @@ const Tutors = () => {
 
   const handleTeacherData = async () => {
     const res = await dispatch(getTecherList());
-    if (res?.status == 200 || res?.success == true) {
-      setTeacherData(res?.data);
-      setTeacherShow(true);
-    } else {
-      setTeacherShow(false);
-    }
+    // if (res?.status == 200 || res?.success == true) {
+    //   setTeacherData(res?.data);
+    //   setTeacherShow(true);
+    // } else {
+    //   setTeacherShow(false);
+    // }
   };
+
+
 
   const navigateTutors = (id) => {
     navigate("/description", { state: id });
   };
+
+
 
   const settings = {
     dots: true,
